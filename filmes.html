@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <head>
 
     <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resilia Flix</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
     <link rel="stylesheet" href="css/reset.css">
+
     <link rel="stylesheet" href="css/bootstrap.css">
+
     <link rel="stylesheet" href="css/style.css">
 
+    <title>Resilia Flix</title>
 
 </head>
 
@@ -61,7 +63,10 @@
                             <a class="nav-link" href="Sobre.html">Sobre</a>
 
                         </li> -->
-
+                        <form class="d-flex">
+                            <input class="form-control me-sm-2" type="text" id="nomeBusca" placeholder="Busque um filme">
+                            <button class="btn btn-secondary my-2 my-sm-0" id="buscar" type="submit">Buscar</button>
+                          </form>
 
 
                     </ul>
@@ -72,24 +77,12 @@
 
     </header>
 
-    <main>      
+    <main id="principal">      
 
-        <div class="principal">
+        <div class="principal">            
+              
 
-            <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="email@exemplo.com">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="exampleInputPassword1" class="form-label mt-4">Senha</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-
-        </div>
-      
+        </div>      
 
     </main>
 
