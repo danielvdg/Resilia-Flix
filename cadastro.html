@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Resilia Flix</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+    <header>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                
+                <a class="navbar-brand" href="index.html">ResiliaFlix</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                
+            </button>
+            
+            <!-- <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="login.html">login 
+                            <span class="visually-hidden">(current)</span> 
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="cadastro.html">Cadastro</a>
+                        
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="Filmes.html">Filmes</a>
+                        
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="Sobre.html">Sobre</a>
+                        
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="Sobre.html">Sobre</a>
+                        
+                    </li> 
+                    
+                    
+                    
+                </ul> 
+                
+            </div> -->
+            
+        </div>
+    </nav>
+    
+</header>
+
+<main>      
+    
+    <div id="inputConteiner">
+        
+       <!-- Inicio do formulario para colocar os dados do  cadastro -->
+       <form method="get" action=".">
+
+        <label class="labelCadastro"> Nome Completo:
+        <input name= "Nome" class="inputCadastro"  type="text" id="Nome"  size="60" required /></label>
+        
+        <label class="labelCadastro"> email : 
+        <input name= "email" class="inputCadastro" type="email" id="email" size="60" required  /></label>
+
+        <label class="labelCadastro"> senha :
+        <input name= "senha" class="inputCadastro" type="password" id="senha" size="30" required  /></label>
+
+        <label class="labelCadastro"> Confirmação De Senha :
+        <input name= "confirmacaoDeSenha" class="inputCadastro" type="password" id="confirmacaoDeSenha" size="30" required  /></label>
+                
+        <label class="labelCadastro">Cep:
+        <input name="cep" class="inputCadastro" type="" id="cep" value="" size="10" maxlength="9"
+        onblur="pesquisacep(this.value);" required /></label>
+        
+        <label class="labelCadastro">Rua:
+        <input name="rua" class="inputCadastro" type="text" id="rua" size="60" required /></label>
+        
+        <label class="labelCadastro">Complemento:
+        <input name="complemento" class="inputCadastro" type="text" id="complemento" size="40" /></label>
+
+        <label class="labelCadastro">Bairro:
+        <input name="bairro" class="inputCadastro" class="inputCadastro" type="text" id="bairro" size="40" required /></label>
+        
+        <label class="labelCadastro">Cidade:
+        <input name="cidade" class="inputCadastro" type="text" id="cidade" size="40" required /></label>
+        
+        <label class="labelCadastro">Estado:
+        <input name="uf" class="inputCadastro" type="text" id="uf" size="2" /></label><br required />
+
+        <div id="btnPrincipal">
+
+            <button id="btnCadastrar" >Cadastrar</button>
+
+        </div>
+        
+    </form>
+        
+    </div>
+    
+    
+</main>
+
+<footer id="footerConteiner">
+    
+    <p>©Copyrigth - todos o direitos reservados - ResiliaFlix</p>
+    
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/Jquery.js"></script>
+<script src="js/ValidaCep.js"></script>
+
+</body>
+
+</html>
