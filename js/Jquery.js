@@ -51,9 +51,7 @@
   
 // }
 
-var numPagina = $('#numPagina')
 
-var filmes = []
 
 const main = $('#principal')
 
@@ -70,6 +68,10 @@ paginador.hide()
 const retornaPaginaFilme = $('#retornaPaginaFilme')
 
 const avancaPaginaFilme = $('#avancaPaginaFilme')
+
+var numPagina = $('#numPagina')
+
+var filmes = []
 
 function impressoraDeFilmes(arr){   
 
