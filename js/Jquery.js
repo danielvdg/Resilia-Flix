@@ -51,40 +51,55 @@
   
 // }
 
+
+
 const main = $('#principal')
 
-let filmes = []
+const nomeBusca = $('#nomeBusca')
 
-let nomeBusca = $('#nomeBusca')
+const buscarFilme = $('#buscar')
 
-let buscar = $('#buscar')
+const quadro = $('.principal')
 
-let quadro = $('.principal')
+const paginador = $('.pagina')
 
+paginador.hide()
 
-function impressora(arr){
+const retornaPaginaFilme = $('#retornaPaginaFilme')
+
+const avancaPaginaFilme = $('#avancaPaginaFilme')
+
+var numPagina = $('#numPagina')
+
+var filmes = []
+
+function impressoraDeFilmes(arr){   
 
     for(let i = 0; i < arr.length; i++){
 
-               let filme = `
+        if(arr[i].Poster != "N/A" && arr[i].Type == "movie"){
+            
+            let filme = `
 
-                <div class="card" style="width: 18rem;">
-                <img src="${arr[i].Poster}" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Oi</p>
-                <a href="#" class="btn btn-primary">Sobre</a>
-                </div>
-                </div>
-                      `                
+        <div class="card border .bg-dark.bg-gradient cardCustom" style="width: 18rem; ">
+        <img src="${arr[i].Poster}" class="card-img-top" alt="...">
+        
+        <small class="card-title">${arr[i].Title}</small>
+        <span></span>        
+        <a href="#" class="btn btn-primary">Sobre</a>
+       
+        </div>
+                `               
 
         quadro.html($('.principal').html() + `${filme}`)
 
-    }
-    
+        }    
+
+    }    
+        
 }
 
-buscar.on('click', function(e){
+buscarFilme.on('click', function(e){
 
     e.preventDefault()    
 
@@ -96,33 +111,129 @@ buscar.on('click', function(e){
          
         quadro.html('<span class="error">Ooops... você não digitou nada!</span>')
 
-    }
+    }    
     else{
 
         $.ajax({
 
-            url:`http://www.omdbapi.com/?s=${nomeFilme}&apikey=fbde633c`,
-        
+            url:`http://www.omdbapi.com/?s=${nomeFilme}&apikey=fbde633c`,        
             success: filme =>{
         
-                filmes = filme.Search  
+                filmes = filme.Search          
                 
-                console.log(filmes)
+                console.log(filme)
+
+                if(typeof filmes == 'undefined'){
+
+                    quadro.html('<span class="error">Ooops... Filme não encontrado</span>')
+
+                }else{                    
                 
-                impressora(filmes)
+                    let totalResults = parseInt(filme.totalResults)
+
+                    impressoraDeFilmes(filmes)  
+                    
+                    if(totalResults > 10){
+
+                        paginador.show()
+                        numPagina.val('1')
+                        retornaPaginaFilme.hide()
+                        console.log()
+
+                    }else{
+                        paginador.hide()
+
+                    }
+
+                                                 
+                }
+                
             }
         
         })
-
 
     }     
 
 })
 
+retornaPaginaFilme.on('click', function(){
 
+    quadro.html('')
+    
+    let nomeFilme = nomeBusca.val()
 
+    let paginaAtual = parseInt(numPagina.val())
 
+        if(paginaAtual >= 3){
 
+            $.ajax({     
+
+                url:`http://www.omdbapi.com/?s=${nomeFilme}&page=${--paginaAtual}&apikey=fbde633c`,            
+                success: filme =>{            
+                    filmes = filme.Search   
+                    impressoraDeFilmes(filmes)                    
+                    numPagina.val(`${paginaAtual}`)
+
+                }
+                
+             })
+
+        }else if(paginaAtual == 2){
+
+            $.ajax({        
+
+                url:`http://www.omdbapi.com/?s=${nomeFilme}&page=${--paginaAtual}&apikey=fbde633c`,            
+                success: filme =>{            
+                    filmes = filme.Search      
+                    impressoraDeFilmes(filmes)                    
+                    numPagina.val(`${paginaAtual}`)
+                    retornaPaginaFilme.hide()
+                }
+                
+             })
+        }
+
+})
+
+avancaPaginaFilme.on('click', function(){
+
+    quadro.html('')
+
+    let nomeFilme = nomeBusca.val()
+
+    let paginaAtual = parseInt(numPagina.val())
+
+        if(paginaAtual >= 1){
+
+            $.ajax({        
+
+                url:`http://www.omdbapi.com/?s=${nomeFilme}&page=${++paginaAtual}&apikey=fbde633c`,            
+                success: filme =>{            
+                    filmes = filme.Search   
+                    impressoraDeFilmes(filmes)                    
+                    numPagina.val(`${paginaAtual}`)
+                    retornaPaginaFilme.show()
+
+                }
+                
+             })
+
+        }else if(paginaAtual == filme.totalResults){
+
+            $.ajax({        
+
+                url:`http://www.omdbapi.com/?s=${nomeFilme}&page=${--paginaAtual}&apikey=fbde633c`,            
+                success: filme =>{            
+                    filmes = filme.Search      
+                    impressoraDeFilmes(filmes)                    
+                    numPagina.val(`${paginaAtual}`)
+                    avancaPaginaFilme.hide()
+                }
+                
+             })
+        }
+  
+})
 
 
 
