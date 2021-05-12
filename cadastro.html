@@ -74,39 +74,50 @@
     
     <div id="inputConteiner">
         
-       <!-- Inicio do formulario para colocar os dados do  cadastro -->
-       <form method="get" action=".">
+        <!-- Inicio do formulario -->
 
-        <label class="labelCadastro"> Nome Completo:
-        <input name= "Nome" class="inputCadastro"  type="text" id="Nome"  size="60" required /></label>
+        <!-- Deve conter formulário com:
+        Nome;
+        E-mail;
+        Senha;
+        Confirmação de senha;
+        RG;
+        CEP (que completa os demais campos do endereço com consulta à API e trata erros);
+        Campos de endereço (estado, cidade, bairro, rua, número, complemento). -->
+
+      <form method="get" action=".">
+        <label class="labelCadastro" >Nome Completo:
+        <input name="nome" type="text" id="nome" class="inputCadastro" size="60"/></label class="labelCadastro"  ><br /> 
         
-        <label class="labelCadastro"> email : 
-        <input name= "email" class="inputCadastro" type="email" id="email" size="60" required  /></label>
-
-        <label class="labelCadastro"> senha :
-        <input name= "senha" class="inputCadastro" type="password" id="senha" size="30" required  /></label>
-
-        <label class="labelCadastro"> Confirmação De Senha :
-        <input name= "confirmacaoDeSenha" class="inputCadastro" type="password" id="confirmacaoDeSenha" size="30" required  /></label>
+        <label class="labelCadastro" > E-mail:
+        <input name="email" type="email" id="email" class="inputCadastro" size="30" required ></label><br />
+        
+        <label class="labelCadastro" >Senha:
+        <input name="senha" type="password" id="senha" class="inputCadastro" size="20" required ></label><br />
                 
-        <label class="labelCadastro">Cep:
-        <input name="cep" class="inputCadastro" type="" id="cep" value="" size="10" maxlength="9"
-        onblur="pesquisacep(this.value);" required /></label>
-        
-        <label class="labelCadastro">Rua:
-        <input name="rua" class="inputCadastro" type="text" id="rua" size="60" required /></label>
-        
-        <label class="labelCadastro">Complemento:
-        <input name="complemento" class="inputCadastro" type="text" id="complemento" size="40" /></label>
+        <label class="labelCadastro" >Confimação de Senha:
+        <input name="confirmacaoSenha" type="password" id="confirmacaoSenha" class="inputCadastro" size="20" required ></label><br />
 
+        <label class="labelCadastro" >RG:
+        <input name="rg" type="password" id="rg" class="inputCadastro" size="10" maxlength="15" required ></label><br />
+
+        <label class="labelCadastro" >Cep:
+        <input name="cep" type="text" id="cep" class="inputCadastro"  value="" size="10" maxlength="9" required /></label ><br />
+        
+        <label class="labelCadastro" >Rua:
+        <input name="rua" type="text" id="rua" class="inputCadastro" size="60"  /></label><br />
+        
         <label class="labelCadastro">Bairro:
-        <input name="bairro" class="inputCadastro" class="inputCadastro" type="text" id="bairro" size="40" required /></label>
+        <input name="bairro" type="text" id="bairro" class="inputCadastro" size="40" /></label><br />
         
         <label class="labelCadastro">Cidade:
-        <input name="cidade" class="inputCadastro" type="text" id="cidade" size="40" required /></label>
+        
+        <input name="cidade" type="text" id="cidade" class="inputCadastro" size="40" /></label><br />
         
         <label class="labelCadastro">Estado:
-        <input name="uf" class="inputCadastro" type="text" id="uf" size="2" /></label><br required />
+        <input name="uf" type="text" id="uf" class="inputCadastro" size="2" /></label><br />
+        
+      </form>
 
         <div id="btnPrincipal">
 
@@ -114,7 +125,7 @@
 
         </div>
         
-    </form>
+    </div>
         
     </div>
     
@@ -130,6 +141,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
 ></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script src="js/Jquery.js"></script>
 <script src="js/ValidaCep.js"></script>
 
