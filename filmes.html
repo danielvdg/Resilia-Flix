@@ -17,67 +17,29 @@
 
     <link rel="stylesheet" href="css/filme.css">
 
+    <link rel="stylesheet" href="css/style.css">
+
     <title>Resilia Flix</title>
 
 </head>
 
 <body>
-    <header>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container-fluid">
+    <header class="header">
 
-                <a class="navbar-brand" href="index.html">ResiliaFlix</a>
+        <img src="img/sf.png" alt="Resiliaflix" draggable="false" />
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <div> <a href="#" data-bs-toggle="modal" data-bs-target="#formLogin">Login</a>
+            
+            <div  id="formbusca">
+                <form class="d-flex">
+                <input class="form-control me-sm-2" type="text" id="nomeBusca" placeholder="Busque um filme">
+                <button class="btn btn-secondary" id="buscar" type="submit">Buscar</button>
+            </form>
+        </div>
+            
 
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav me-auto">
-
-                        <li id="linkFilme" class="nav-item  menulink">
-
-                            <a class="nav-link">Filmes
-                                <span class="visually-hidden">(current)</span>
-                            </a>
-                        </li>
-
-                        <!-- <li class="nav-item">
-
-                            <a class="nav-link" href="cadastro.html">Cadastro</a>
-
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="Filmes.html">Filmes</a>
-
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="Sobre.html">Sobre</a>
-
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="Sobre.html">Sobre</a>
-
-                        </li> -->
-
-
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-sm-2" type="text" id="nomeBusca" placeholder="Busque um filme">
-                        <button class="btn btn-secondary" id="buscar" type="submit">Buscar</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+        </div>
 
     </header>
 
@@ -123,6 +85,7 @@
                             </div>
                         </div>
 
+
                     </div>
                 </div>
             </div>
@@ -132,9 +95,9 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/MVC/Controllers/filme-controller.js"></script>
-    <script src="js/MVC/Models/filme-model.js"></script>
-    <script src="js/MVC/Views/filme-view.js"></script>
+    <script src="js/src/Controllers/filme-controller.js"></script>
+    <script src="js/src/Models/filme-model.js"></script>
+    <script src="js/src/Views/filme-view.js"></script>
     <script src="js/viewEngine.js"></script>
 </body>
 

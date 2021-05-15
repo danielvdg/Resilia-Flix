@@ -45,13 +45,13 @@ right: 0;
 
 .loginBody {
 
-    padding: 60px;
+    padding: 50px;
     z-index: 90;
     position: relative;
     max-width: 450px;
     height: 630px;
     margin-left: 50%;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.932);
     border-radius: 10px;
     box-sizing: border-box;
     transform: translateX(-50%);
@@ -59,7 +59,7 @@ right: 0;
 }
 
 .loginBody h2 {
-
+    margin-bottom: 15px;
     font-size: 32px;
     color: #fff;
     margin-top: 0;
@@ -182,3 +182,9 @@ right: 0;
     text-decoration: none;
     color : #0071eb
 } 
+
+
+.modal-content {   
+    background-color: rgba(255, 255, 255, 0);
+
+  }

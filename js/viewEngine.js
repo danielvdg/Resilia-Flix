@@ -266,7 +266,7 @@ linkFilme.on('click', function(){
 
     setTimeout(function () {
 
-        let filmesPrincipais = ["tt0371746", "tt0458339", "tt2015381", "tt2395427", "tt0478970", "tt1843866", "tt2250912", "tt1825683", "tt4154756", "tt5095030", "tt4154664"]
+        let filmesPrincipais = ["tt0371746", "tt0458339", "tt2015381", "tt2395427", "tt0478970", "tt1843866", "tt2250912", "tt1825683", "tt4154756", "tt5095030", "tt4154664", "tt4154796"]
     
     
         for(let i = 0; i < filmesPrincipais.length; i++){            
