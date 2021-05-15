@@ -36,8 +36,7 @@ main{
     color: rgb(0, 0, 0);     
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    text-align: justify;
+    align-items: center;    
     flex-direction:column;
 
 }
@@ -61,11 +60,12 @@ header{
 }
 
 .principal{    
-    background-color: #000000d1;
+    background-color: #000000be;
     width: 90%;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;    
+    padding-bottom:20px;
     
 }
 
@@ -75,7 +75,9 @@ header{
     font-weight: bold;
     font-family: 'Bebas Neue', cursive;
     font-size: 45px;
-    letter-spacing: 1.5px;    
+    letter-spacing: 1.5px;
+    margin: 0 auto;
+    align-self: center;
     
 }
 
@@ -85,7 +87,6 @@ header{
     color: white;
     padding-top: 40px;
     padding-bottom: 40px;
-
     width: 80%;
     height: auto;
 
@@ -122,7 +123,6 @@ header{
     font-size: 25px;
     width: 20%;    
     border-radius: 25px;
-
     background-color: red;
     color: black;
     font-family: 'Times New Roman', Times, serif;
@@ -148,7 +148,7 @@ header{
 
 i{
     color:yellow;
-   font-size: 30px; 
+    font-size: 30px; 
 }
 
 #numPagina{
@@ -169,12 +169,109 @@ input[type=number] {
 }
 
 .cardCustom{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    background-color: #000000d4;
+    margin-top: 20px;
+    width: 25%;    
+    display: flex;    
+    flex-direction: column;     
+    align-items: center;   
+    padding: 0px 5px;
+    height: 500px;   
+   
+}
+
+.cardCustom img{
+    width: 75%;
+    min-width: 80%;
+    max-height: max-content;
+    min-height: 80%;
+    margin-top: 15px;
+    transition-timing-function: ease;
+    transition-duration: 1.2ms;
+    transition-delay: .5ms;   
 
 }
 
+
+
+.cardCustom small{    
+    color: yellow;
+    font-size: 12px;  
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;  
+
+}
+#loader{
+    margin: 0 auto;
+
+}
+
+.menulink:hover{
+    cursor: pointer;
+
+}
+
+.divBotao{
+    justify-content: space-around;
+    display: flex;
+    width: 60%
+    
+}
+
+.divBotao i{
+    color:yellow;
+    font-size: 25px;
+    max-height: 100%;
+
+}
+
+.letraEspacamento{
+    letter-spacing: normal;
+    color: rgb(0, 0, 0);
+
+}
+
+.sinopse{
+    color:rgb(0, 0, 0);
+}
+
+.fundo{
+    background-color: rgba(0, 0, 0, 0.541);
+
+}
+
+@media (max-width: 800px){
+
+    .cardCustom{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .principal{
+        align-items: center;
+    }
+
+    .cardCustom img{
+        width: 80%;
+       
+    }
+  
+  
+  }
+
+  @media (max-width: 600px){
+
+    .cardCustom{
+        width: 80%;    
+        margin: 0 auto;
+    }
+
+    .principal{
+        align-items: center;
+    }
+  
+    .cardCustom img{
+        width: 90%;     
+    
+    }
+  
+  }

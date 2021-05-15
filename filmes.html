@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
-    
+
     <meta charset="UTF-8">
 
     <script src="https://kit.fontawesome.com/6a2ffc1ad1.js" crossorigin="anonymous"></script>
@@ -12,7 +15,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/filme.css">
 
     <title>Resilia Flix</title>
 
@@ -35,14 +38,14 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
 
-                        <!-- <li class="nav-item">
+                        <li id="linkFilme" class="nav-item  menulink">
 
-                            <a class="nav-link" href="login.html">login -->
-                        <!-- <span class="visually-hidden">(current)</span> -->
-                        <!-- </a>
+                            <a class="nav-link">Filmes
+                                <span class="visually-hidden">(current)</span>
+                            </a>
                         </li>
 
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
 
                             <a class="nav-link" href="cadastro.html">Cadastro</a>
 
@@ -70,7 +73,7 @@
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-sm-2" type="text" id="nomeBusca" placeholder="Busque um filme">
-                        <button class="btn btn-secondary my-2 my-sm-0" id="buscar" type="submit">Buscar</button>
+                        <button class="btn btn-secondary" id="buscar" type="submit">Buscar</button>
                     </form>
                 </div>
             </div>
@@ -102,10 +105,37 @@
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"> </script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/Jquery.js"></script>
-    <script src="js/DOM.js"></script>
+    <div class="modal fade" tabindex="-1" id="filmeInfos">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="tituloFilme" class="modal-title letraEspacamento">Filme Título</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
 
+                        <div class="row">
+                            <div class="col-6"><img id="imgFilme" src="" class="">
+                                <p class="sinopse" id="sinopse">
+                                    sinopse
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/MVC/Controllers/filme-controller.js"></script>
+    <script src="js/MVC/Models/filme-model.js"></script>
+    <script src="js/MVC/Views/filme-view.js"></script>
+    <script src="js/viewEngine.js"></script>
 </body>
 
 </html>
