@@ -2,12 +2,12 @@
 <html lang="pt-br">
 
 <head>
-    
+    <link rel="shortcut icon" type="image/x-icon" href="../Resilia-Flix/img/title.png">
     <meta charset="UTF-8">
-    <title>Resilia Flix</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css"> -->
     
 </head>
 
@@ -76,19 +76,11 @@
         
         <!-- Inicio do formulario -->
 
-        <!-- Deve conter formulário com:
-        Nome;
-        E-mail;
-        Senha;
-        Confirmação de senha;
-        RG;
-        CEP (que completa os demais campos do endereço com consulta à API e trata erros);
-        Campos de endereço (estado, cidade, bairro, rua, número, complemento). -->
-
+       
       <form method="get" action=".">
         <label class="labelCadastro" >Nome Completo:
-        <input name="nome" type="text" id="nome" class="inputCadastro" size="60"/></label class="labelCadastro"  ><br /> 
-        
+        <input name="nome" type="text" id="nome" class="inputCadastro" size="60"/><p>Nome invalído</p></label> 
+                    
         <label class="labelCadastro" > E-mail:
         <input name="email" type="email" id="email" class="inputCadastro" size="30" required ></label><br />
         
@@ -102,16 +94,20 @@
         <input name="rg" type="text" id="rg" class="inputCadastro" size="10" maxlength="12" required ></label><br />
 
         <label class="labelCadastro" >Cep:
-        <input name="cep" type="text" id="cep" class="inputCadastro"  value="" size="10" maxlength="9" required /></label ><br />
+        <input name="cep" type="number" id="cep" class="inputCadastro"  value="" size="10" maxlength="9" required /></label ><br />
         
         <label class="labelCadastro" >Rua:
         <input name="rua" type="text" id="rua" class="inputCadastro" size="60"  /></label><br />
+        <label class="labelCadastro" >Numero:
+        <input name="numero" type="text" id="numero" class="inputCadastro" size="5"  /></label><br />
+        
+        <label class="labelCadastro" >Complemento:
+        <input name="complemento" type="text" id="complemento" class="inputCadastro" size="30"  /></label><br />
         
         <label class="labelCadastro">Bairro:
         <input name="bairro" type="text" id="bairro" class="inputCadastro" size="40" /></label><br />
         
-        <label class="labelCadastro">Cidade:
-        
+        <label class="labelCadastro">cidade:        
         <input name="cidade" type="text" id="cidade" class="inputCadastro" size="40" /></label><br />
         
         <label class="labelCadastro">Estado:
@@ -143,7 +139,8 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script src="js/Jquery.js"></script>
-<script src="js/ValidaCep.js"></script>
+<script src="js/cadastro.js"></script>
+<script src="js/validacao.js"></script>
 
 </body>
 

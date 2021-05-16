@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html{
+    background-color: black;
+}
+
+  body{
+      background-color: black;
+  }
+
+  .main {
+    padding-top: 4rem;
+    height: 785px;
+    background: url("../img/bg.jpg") center;
+    display: flex;
+    align-items: center;
+
+}
+
+.principal{    
+    background-color: #000000be;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom:20px;
+    margin: 0 auto;
+    
+}
+
+.error{    
+    color:yellow;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    letter-spacing: 1.5px;
+    margin: 0 auto;
+    align-self: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    
+}  
+        
+.pagina{
+    display: flex;
+    margin-top: 20px;         
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: #000000d1;
+    width: 110px;
+    margin: 0 auto;
+}
+
+i{
+    color:yellow;
+    font-size: 30px; 
+}
+
+#numPagina{
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+.cardCustom{
+    margin-top: 20px;
+    width: 25%;    
+    display: flex;    
+    flex-direction: column;     
+    align-items: center;   
+    padding: 0px 5px;
+    height: 500px;   
+   
+}
+
+.cardCustom img{
+    width: 70%;
+    min-width: 80%;
+    max-height: max-content;
+    min-height: 80%;
+    margin-top: 15px;
+    transition-timing-function: ease;
+    transition-duration: 1.2ms;
+    transition-delay: .5ms;  
+    margin-bottom: 20px; 
+    border: solid 2px rgba(255, 255, 255, 0.527) ;
+
+}
+
+#formBusca{    
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    
+}
+
+#formBusca button{
+    background-color: rgba(255, 255, 0, 0.637);
+    
+    
+
+}
+
+#formBusca input{
+    background-color: rgba(243, 243, 243, 0.397);
+    color: rgb(255, 255, 255);
+
+}
+
+#formBusca ::placeholder{
+    color: rgb(255, 251, 0);
+
+}
+
+
+
+.cardCustom small{    
+    color: yellow;
+    font-size: 12px;  
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;  
+
+}
+#loader{
+    margin: 0 auto;
+
+}
+
+.menulink:hover{
+    cursor: pointer;
+
+}
+
+.divBotao{
+    justify-content: space-around;
+    display: flex;
+    width: 60%
+    
+}
+
+.divBotao i{
+    color:yellow;
+    font-size: 25px;
+      
+
+}
+
+.letraEspacamento{
+    letter-spacing: normal;
+    color: rgb(0, 0, 0);
+
+}
+
+.sinopse{
+    color:rgb(0, 0, 0);
+}
+
+.fundo{
+    background-color: rgba(0, 0, 0, 0.541);
+
+}
+
+.secTopo{
+    background-color: yellow;
+    margin-top: 130px;
+
+}
+
+.imgCaro{
+
+    width: 70%;
+
+}
+
+#carouselExampleSlidesOnly{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.filmeInfo {   
+    background-color: rgba(255, 255, 255, 0.726);
+
+  }
+
+.resultados{
+    color: yellow;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 15px;
+
+}
+
+.ultimosLancamentos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+    font-family: 'Bebas Neue', cursive;
+    margin:0 auto;
+
+}
+
+.fechaModal{
+    background-color: yellow;
+
+}
+
+.loginBox h2{
+    text-align: center;
+
+}
+
+
+@media (max-width: 800px){
+
+    .cardCustom{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #carouselExampleSlidesOnly{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .principal{
+        align-items: center;
+    }
+
+    .cardCustom img{
+        width: 80%;
+       
+    }
+  
+  
+  }
+
+  @media (max-width: 600px){
+
+    .cardCustom{
+        width: 100%;    
+        margin: 0 auto;
+    }
+
+    .principal{
+        align-items: center;
+    }
+  
+    .cardCustom img{
+        width: 100%;     
+    
+    }
+
+    #formBusca{    
+       flex-direction: column-reverse;      
+        
+    }
+
+    #carouselExampleSlidesOnly{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .secTopo{
+
+        margin-top: 100px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    
+    }
+
+    .loginBody {
+        padding: 15px;
+    
+    }
+
+    .signUp p{
+        font-size: 15px;
+        display: inline-block;
+
+    }
+    .signUp a{
+        font-size: 15px;
+        display: inline-block;
+
+    }
+  
+  }
