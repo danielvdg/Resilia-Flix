@@ -365,3 +365,113 @@
     }
   }
   
+
+  /* Página de usuários */
+
+  .usuarios {
+
+    width: 85%;
+    height: 450px;
+    background-color: rgba(145, 131, 131, 0.404);
+    border-radius: 4px;
+  }
+
+  .logo {
+
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .usuarios h2 {
+
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-family: sans-serif;
+    text-transform: none;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    color: grey;
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: none;
+    font-size: 17px;
+    margin-top: 5px;
+    }
+
+  div img {
+
+    border-radius: 4px;
+  }
+
+  #img1 {
+
+    height: 10vw;
+    width: 10vw;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 84px;
+    min-width: 84px;
+    display: inline-block;
+    margin-left: 240px;
+    
+  }
+  
+  #img2 {
+
+    height: 10vw;
+    width: 10vw;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 84px;
+    min-width: 84px;
+    display: inline-block;
+    margin-left: 30px;
+
+  }
+
+  #img3 {
+    height: 10vw;
+    width: 10vw;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 84px;
+    min-width: 84px;
+    display: inline-block;
+    margin-left: 30px;
+
+    
+  }
+
+  #img4 {
+
+    height: 10vw;
+    width: 10vw;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 84px;
+    min-width: 84px;
+    display: inline-block;
+    margin-left: 30px;
+    
+  }
+
+  .gerenciar {
+
+    display: block;
+    width: 250px;
+    margin: 2em 0 1em 0;
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    color: grey;
+    text-transform: uppercase;
+    padding: .5em 1.5em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: 430px;
+  }
