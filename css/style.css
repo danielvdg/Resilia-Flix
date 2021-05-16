@@ -33,6 +33,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     top: 28px;
     padding: 0 56px;
     box-sizing: border-box;
@@ -363,5 +364,14 @@
     .faq-answer > div {
       padding: 21px;
     }
+
+    .secTopo{
+
+      margin-top: 100px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+  
+  }
+
   }
   
