@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
-    
+
     <meta charset="UTF-8">
 
     <script src="https://kit.fontawesome.com/6a2ffc1ad1.js" crossorigin="anonymous"></script>
@@ -12,6 +15,8 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
 
+    <link rel="stylesheet" href="css/filme.css">
+
     <link rel="stylesheet" href="css/style.css">
 
     <title>Resilia Flix</title>
@@ -19,62 +24,22 @@
 </head>
 
 <body>
-    <header>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container-fluid">
+    <header class="header">
 
-                <a class="navbar-brand" href="index.html">ResiliaFlix</a>
+        <img src="img/sf.png" alt="Resiliaflix" draggable="false" />
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <div> <a href="#" data-bs-toggle="modal" data-bs-target="#formLogin">Login</a>
+            
+            <div  id="formbusca">
+                <form class="d-flex">
+                <input class="form-control me-sm-2" type="text" id="nomeBusca" placeholder="Busque um filme">
+                <button class="btn btn-secondary" id="buscar" type="submit">Buscar</button>
+            </form>
+        </div>
+            
 
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav me-auto">
-
-                        <!-- <li class="nav-item">
-
-                            <a class="nav-link" href="login.html">login -->
-                        <!-- <span class="visually-hidden">(current)</span> -->
-                        <!-- </a>
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="cadastro.html">Cadastro</a>
-
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="Filmes.html">Filmes</a>
-
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="Sobre.html">Sobre</a>
-
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="Sobre.html">Sobre</a>
-
-                        </li> -->
-
-
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-sm-2" type="text" id="nomeBusca" placeholder="Busque um filme">
-                        <button class="btn btn-secondary my-2 my-sm-0" id="buscar" type="submit">Buscar</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+        </div>
 
     </header>
 
@@ -102,10 +67,38 @@
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"> </script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/Jquery.js"></script>
-    <script src="js/DOM.js"></script>
+    <div class="modal fade" tabindex="-1" id="filmeInfos">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="tituloFilme" class="modal-title letraEspacamento">Filme Título</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
 
+                        <div class="row">
+                            <div class="col-6"><img id="imgFilme" src="" class="">
+                                <p class="sinopse" id="sinopse">
+                                    sinopse
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/src/Controllers/filme-controller.js"></script>
+    <script src="js/src/Models/filme-model.js"></script>
+    <script src="js/src/Views/filme-view.js"></script>
+    <script src="js/viewEngine.js"></script>
 </body>
 
 </html>

@@ -10,7 +10,9 @@
     <title>Resiliaflix</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/style.css">
+    
 
 
 </head>
@@ -20,12 +22,9 @@
     <header class="header">
 
         <img src="img/sf.png" alt="Resiliaflix" draggable="false" />
-        
-        <a href="#">Login</a>
-    
 
-    </header>
-
+        <a href="#" data-bs-toggle="modal" data-bs-target="#formLogin">Login</a>
+      </header>
       <main class="main">
         <div class="main-child">
           <h1>Filmes, séries e muito mais. Sem limites.</h1>
@@ -41,7 +40,7 @@
         </div>
         <div class="gradient"></div>
       </main>
-     
+
       <section class="section">
         <div class="container">
           <div class="grid">
@@ -193,6 +192,57 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/Jquery.js"></script>
     <script src="js/DOM.js"></script>
+
+    <div class="modal fade modallogin" tabindex="-1" id="formLogin">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+
+                        <div class="loginBody">
+                            <div class="loginBox">
+                                <h2>Login</h2>
+                                <form>
+                                    <div class="inputTopo">
+                                        <input type="text" placeholder="Email ou telefone">
+                                    </div>
+                                    <div class="inputTopo">
+                                        <input type="text" placeholder="Senha">
+                                    </div>
+                                    <div class="inputTopo">
+                                        <button>Sign in</button>
+                                    </div>
+                                    <div class="suporte">
+                                        <div class="lembreDeMim">
+                                            <span><input type="checkbox"></span>
+                                            <span>Lembre-se de mim</span>
+                                        </div>
+                                    <div class="ajuda">
+                                        Precisa de ajuda?
+                                    </div>                       
+                                    </div>
+                                    <div class="loginFooter">
+                                        <div class="loginFace">
+                                            <span><img src="../Resilia-Flix/img/fb-login.png" alt="fb"></span>
+                                            <span><a href="#">Entre com o facebook</a></span>
+                                        </div>
+                                        <div class="signUp">
+                                            <p>Novo no Resiliaflix? <a href="#">Cadastre-se.</a></p>
+                                        </div>
+                                    <div class="termos">
+                                        <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.<a href="#">Saiba mais</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
 
 </body>
 
