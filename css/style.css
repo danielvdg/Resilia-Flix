@@ -40,7 +40,7 @@
   }
   
   .header a {
-    display: inline-block;
+   
     background: #ffff00;
     color: white;
     align-self: flex-start;

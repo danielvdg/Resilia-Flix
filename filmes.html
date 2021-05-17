@@ -3,316 +3,368 @@
 
 <head>
 
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <script src="https://kit.fontawesome.com/6a2ffc1ad1.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/6a2ffc1ad1.js" crossorigin="anonymous"></script>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reset.css">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
 
-    <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/login.css">
 
-    <link rel="stylesheet" href="css/filme.css">
+  <link rel="stylesheet" href="css/filme.css">
 
-    <link rel="stylesheet" href="css/style.css">    
+  <link rel="stylesheet" href="css/style.css">
 
-    <title>Resilia Flix</title>
+  <title>Resilia Flix</title>
 
 </head>
 
 <body>
 
-    <header class="header">
+  <header class="header">
 
-        <img src="img/sf.png" alt="Resiliaflix" draggable="false" />
+    <img src="img/sf.png" alt="Resiliaflix" draggable="false" />
 
-        <div class="link-flex"> <a href="#" data-bs-toggle="modal" data-bs-target="#formLogin">Login</a>
-            
-        </div>
-            
+    <div class="link-flex"> <a href="#topo" class="deslogado" data-bs-toggle="modal" data-bs-target="#formLogin">Login</a>
+      <a href="#topo" class="logado sair">Sair</a>
 
-        
+    </div>
 
-    </header>
+  </header>
 
-    <main class="main deslogado">
-        <div class="main-child">
-          <h1>Filmes, séries e muito mais. Sem limites.</h1>
-          <span>Assista onde quiser. Cancele quando quiser.</span> 
+  <main class="main deslogado">
+    <div class="main-child">
+      <h1>Filmes, séries e muito mais. Sem limites.</h1>
+      <span>Assista onde quiser. Cancele quando quiser.</span>
+      <p>
+        Pronto para assistir? Informe seu email para criar ou reiniciar sua
+        assinatura.
+      </p>
+      <form class="form-cta">
+        <input type="text" placeholder="Email" />
+        <button>Vamos lá</button>
+      </form>
+    </div>
+    <div class="gradient"></div>
+  </main>
+
+  </div>
+
+  <section class="section deslogado">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <h1>Aproveite na TV.</h1>
           <p>
-            Pronto para assistir? Informe seu email para criar ou reiniciar sua
-            assinatura.
+            Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+            aparelhos de Blu-ray e outros aparelhos.
           </p>
-          <form class="form-cta">
-            <input type="text" placeholder="Email" />
-            <button>Vamos lá</button>
-          </form>
         </div>
-        <div class="gradient"></div>
-      </main>
+        <div class="img-tv">
+          <img src="img/tv.png" alt="TV" />
+          <video class="video-tv" autoplay playsinline muted loop>
+            <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+              type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="download section deslogado">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <h1>Baixe séries para assistir offline.</h1>
+          <p>
+            Salve seus títulos favoritos e sempre tenha algo para assistir.
+          </p>
+        </div>
+        <div class="img-tv">
+          <img src="img/celular.png" alt="celular" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="device-pile section deslogado">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <h1>Assista quando quiser.</h1>
+          <p>
+            Assista no celular, tablet, smart TV ou notebook sem pagar a mais
+            por isso.
+          </p>
+        </div>
+        <div class="img-tv">
+          <img src="img/telas.png" alt="Device Pile" />
+          <video class="video-tv" autoplay playsinline muted loop>
+            <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v"
+              type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="section logado secTopo">
+
+    <h3 class="ultimosLancamentos">últimos lançamentos</h3>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/banner (1).jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/banner (2).jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/banner (3).jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/banner (4).jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/banner (6).jpeg" alt="Second slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
     </div>
 
-      <section class="section deslogado">
-        <div class="container">
-          <div class="grid">
-            <div>
-              <h1>Aproveite na TV.</h1>
-              <p>
-                Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
-                aparelhos de Blu-ray e outros aparelhos.
-              </p>
-            </div>
-            <div class="img-tv">
-              <img src="img/tv.png" alt="TV" />
-              <video class="video-tv" autoplay playsinline muted loop>
-                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="download section deslogado">
-        <div class="container">
-          <div class="grid">
-            <div>
-              <h1>Baixe séries para assistir offline.</h1>
-              <p>
-                Salve seus títulos favoritos e sempre tenha algo para assistir.
-              </p>
-            </div>
-            <div class="img-tv">
-              <img src="img/celular.jpg" alt="celular" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="device-pile section deslogado">
-        <div class="container">
-          <div class="grid">
-            <div>
-              <h1>Assista quando quiser.</h1>
-              <p>
-                Assista no celular, tablet, smart TV ou notebook sem pagar a mais
-                por isso.
-              </p>
-            </div>
-            <div class="img-tv">
-              <img src="img/telas.png" alt="Device Pile" />
-              <video class="video-tv" autoplay playsinline muted loop>
-                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div>
-      </section>
+  </section>
 
-      <section class="section logado secTopo">
+  <section class="section logado">
 
-        <h3 class="ultimosLancamentos">últimos lançamentos</h3>
-        
-            <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
-       
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/banner (1).jpg" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/banner (2).jpg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/banner (3).jpg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/banner (4).jpg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/banner (6).jpeg" alt="Second slide">
-                  </div>                 
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Anterior</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Próximo</span>
-                </a>
-              </div>
-           
-          </section>
-      
-        <section  class="section logado">
-    
-            <div id="formBusca">
-    
-                <div><h3 class="resultados">Melhores Filmes</h3></div>
-    
-    
-                <form class="d-flex">
-                <input class="form-control me-sm-2" type="text" id="nomeBusca" placeholder="Digite o nome de um filme">
-                <button class="btn btn-secondary" id="buscar" type="button"><i class="fas fa-search"></i></button>
-            </form>
-            </div>
-    
-            <div class="container-fluid d-flex flex-column justify-content-center">
-                
-         <div class="principal">
-    
-        </div>
-    
-        <div class="pagina">
-            <i id="retornaPaginaFilme" class="fas fa-angle-double-left"></i>
-            <input id="numPagina" type="number">
-            <i id="avancaPaginaFilme" class="fas fa-angle-double-right"></i>
-        </div> 
-          
-            </div>
-          </section>
-     
+    <div id="formBusca">
 
-      <footer class="footer">
-        <section class="faq">
-          <h1>Perguntas frequentes</h1>
-          <dl class="faq-list">
-            <dt class="faq-question">O que é a Resiliaflix?</dt>
-            <dd class="faq-answer">
-              <div>
-                A Resiliaflix é um serviço de transmissão online que oferece uma ampla variedade de séries, filmes e documentários premiados em milhares de aparelhos conectados à internet.<br>
-                <br>
-                Você pode assistir a quantos filmes e séries quiser, quando e onde quiser, sem comerciais – tudo por um preço mensal bem acessível. Aqui você sempre encontra novidades. A cada semana, adicionamos novas séries e filmes.
-              </div>
-            </dd>
-            <dt class="faq-question">Quanto custa a Resiliaflix?</dt>
-            <dd class="faq-answer">
-              <div>
-                Assista à Resiliaflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa mensal única. Os planos variam de R$21,90 a R$45,90 por mês. Sem contrato nem taxas extras.
-              </div>
-            </dd>
-            <dt class="faq-question">Onde posso assistir?</dt>
-            <dd class="faq-answer">
-              <div>
-                Assista onde quiser, o quanto quiser e em um número ilimitado de aparelhos. Faça login com sua conta Resiliaflix em Resiliaflix.com para começar a assistir no computador ou em qualquer aparelho conectado à Internet compatível com o aplicativo Resiliaflix, como Smart TVs, smartphones, tablets, aparelhos de streaming e videogames.<br>
-                <br>
-                Você também pode baixar a sua série favorita com o aplicativo Resiliaflix para iOS, Android ou Windows 10. Use downloads para levar a Resiliaflix para onde quiser sem precisar de conexão com a Internet. Leve a Resiliaflix com você para qualquer lugar.
-              </div>
-            </dd>
-            <dt class="faq-question">Como faço para cancelar?</dt>
-            <dd class="faq-answer">
-              <div>
-                A Resiliaflix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na internet com apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua assinatura a qualquer momento.
-              </div>
-            </dd>
-            <dt class="faq-question">O que eu posso assistir na Resiliaflix?</dt>
-            <dd class="faq-answer">
-              <div>
-                A Resiliaflix tem um grande catálogo de filmes, documentários, séries, originais Resiliaflix premiados e muito mais. Assista o quanto quiser, quando quiser.
-              </div>
-            </dd>
-          </dl>
-        </section>
-        <form class="form-cta">
-          <input type="text" placeholder="Email" />
-          <button>Vamos lá</button>
-        </form>
-        <p>Copyright © 2021 Resiliaflix Brasil. Todos os direitos reservados.</p>
-      </footer>
+      <div>
+        <h3 class="resultados">Melhores Filmes</h3>
+      </div>
 
 
-    <div class="modal fade " tabindex="-1" id="filmeInfos">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
-            <div class="modal-content filmeInfo">
-                <div class="modal-header">
-                    <h5 id="tituloFilme" class="modal-title letraEspacamento">Filme Título</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-
-                        <div class="row">
-                            <div class="col-6"><img id="imgFilme" src="" class="">
-                                <p class="sinopse" id="sinopse">
-                                    sinopse
-                                </p>
-                            </div>
-                        </div>
-                   </div>
-                </div>
-            </div>
-
-        </div>
+      <form class="d-flex">
+        <input class="form-control me-sm-2" type="text" id="nomeBusca" placeholder="Digite o nome de um filme">
+        <button class="btn btn-secondary" id="buscar" type="button"><i class="fas fa-search"></i></button>
+      </form>
     </div>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-        crossorigin="anonymous"> </script>
+    <div class="container-fluid d-flex flex-column justify-content-center">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+      <div class="principal">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/src/Controllers/filme-controller.js"></script>
-    <script src="js/src/Models/filme-model.js"></script>
-    <script src="js/src/Views/filme-view.js"></script>
-    <script src="js/viewEngine.js"></script>
+      </div>
 
-    <div class="modal fade modallogin" tabindex="-1" id="formLogin">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="container-fluid">
-                      <button type="button" class="btn-close fechaModal" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="pagina">
+        <i id="retornaPaginaFilme" class="fas fa-angle-double-left"></i>
+        <input id="numPagina" type="number">
+        <i id="avancaPaginaFilme" class="fas fa-angle-double-right"></i>
+      </div>
 
-                        <div class="loginBody">
-                            <div class="loginBox">
-                                <h2>Login</h2>
-                                <form>
-                                    <div class="inputTopo">
-                                        <input type="text" placeholder="Email ou telefone">
-                                    </div>
-                                    <div class="inputTopo">
-                                        <input type="text" placeholder="Senha">
-                                    </div>
-                                    <div class="inputTopo">
-                                        <button>Sign in</button>
-                                    </div>
-                                    <div class="suporte">
-                                        <div class="lembreDeMim">
-                                            <span><input type="checkbox"></span>
-                                            <span>Lembre-se de mim</span>
-                                        </div>
-                                    <div class="ajuda">
-                                        Precisa de ajuda?
-                                    </div>                       
-                                    </div>
-                                    <div class="loginFooter">
-                                        <div class="loginFace">
-                                            <span><img src="../Resilia-Flix/img/fb-login.png" alt="fb"></span>
-                                            <span><a href="#">Entre com o facebook</a></span>
-                                        </div>
-                                        <div class="signUp">
-                                            <p>Novo no Resiliaflix? <a href="#">Cadastre-se.</a></p>
-                                        </div>
-                                    <div class="termos">
-                                        <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.<a href="#">Saiba mais</a></p>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+    </div>
+  </section>
 
+
+  <footer class="footer">
+    <section class="faq deslogado">
+      <h1>Perguntas frequentes</h1>
+      <dl class="faq-list">
+        <dt class="faq-question">O que é a Resiliaflix?</dt>
+        <dd class="faq-answer">
+          <div>
+            A Resiliaflix é um serviço de transmissão online que oferece uma ampla variedade de séries, filmes e
+            documentários premiados em milhares de aparelhos conectados à internet.<br>
+            <br>
+            Você pode assistir a quantos filmes e séries quiser, quando e onde quiser, sem comerciais – tudo por um
+            preço mensal bem acessível. Aqui você sempre encontra novidades. A cada semana, adicionamos novas séries e
+            filmes.
+          </div>
+        </dd>
+        <dt class="faq-question">Quanto custa a Resiliaflix?</dt>
+        <dd class="faq-answer">
+          <div>
+            Assista à Resiliaflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa
+            mensal única. Os planos variam de R$21,90 a R$45,90 por mês. Sem contrato nem taxas extras.
+          </div>
+        </dd>
+        <dt class="faq-question">Onde posso assistir?</dt>
+        <dd class="faq-answer">
+          <div>
+            Assista onde quiser, o quanto quiser e em um número ilimitado de aparelhos. Faça login com sua conta
+            Resiliaflix em Resiliaflix.com para começar a assistir no computador ou em qualquer aparelho conectado à
+            Internet compatível com o aplicativo Resiliaflix, como Smart TVs, smartphones, tablets, aparelhos de
+            streaming e videogames.<br>
+            <br>
+            Você também pode baixar a sua série favorita com o aplicativo Resiliaflix para iOS, Android ou Windows 10.
+            Use downloads para levar a Resiliaflix para onde quiser sem precisar de conexão com a Internet. Leve a
+            Resiliaflix com você para qualquer lugar.
+          </div>
+        </dd>
+        <dt class="faq-question">Como faço para cancelar?</dt>
+        <dd class="faq-answer">
+          <div>
+            A Resiliaflix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na internet com
+            apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua assinatura a qualquer
+            momento.
+          </div>
+        </dd>
+        <dt class="faq-question">O que eu posso assistir na Resiliaflix?</dt>
+        <dd class="faq-answer">
+          <div>
+            A Resiliaflix tem um grande catálogo de filmes, documentários, séries, originais Resiliaflix premiados e
+            muito mais. Assista o quanto quiser, quando quiser.
+          </div>
+        </dd>
+      </dl>
+    </section>
+    <form class="form-cta deslogado">
+      <input type="text" placeholder="Email" />
+      <button>Vamos lá</button>
+    </form>
+    <p>Copyright © 2021 Resiliaflix Brasil. Todos os direitos reservados.</p>
+  </footer>
+
+
+  <div class="modal fade" tabindex="-1" id="filmeInfos">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+      <div class="modal-content filmeInfo">
+        <div class="modal-header">
+          <h5 id="tituloFilme" class="modal-title letraEspacamento">Filme Título</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="container-fluid">
+
+            <div class="row">
+
+              <div class="col-12 col-md-6">
+
+                <div class="row"> 
+
+                  <img id="imgFilme" src="" class="imgModal d-block">   
+                  <span id="lancamentoEDuracao" class="my-2"></span>
+                </div>               
+
+              </div>
+              <div class="col-12 col-md-6 align-self-end my-2">
+
+                <h4 class="titulosModalInfo align-self-center">Informações</h4>
+
+                <h5 class="titulosModal">Sinopse</h5>
+                <span class="spanModal" id="sinopse">                  
+                </span>
+
+                <h5 class="my-1 titulosModal">Diretor</h5>
+                <span class="spanModal" id="diretor"> 
+                                   
+                </span>
+
+                <h5 class="my-1 titulosModal">Elenco</h5>
+                <span class="spanModal" id="elenco">
+                                    
+                </span>
+
+
+                <span id="notaFilme"></span>
+
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"> </script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/src/Controllers/filme-controller.js"></script>
+  <script src="js/src/Models/filme-model.js"></script>
+  <script src="js/src/Views/filme-view.js"></script>
+  <script src="js/viewEngine.js"></script>
+
+  <div class="modal fade modallogin" tabindex="-1" id="formLogin">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <button type="button" class="btn-close fechaModal" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            <div class="loginBody">
+              <div class="loginBox">
+                <h2>Login</h2>
+                <form>
+                  <div class="inputTopo">
+                    <input type="text" placeholder="Email ou telefone">
+                  </div>
+                  <div class="inputTopo">
+                    <input type="text" placeholder="Senha">
+                  </div>
+                  <div class="inputTopo">
+                    <button>Sign in</button>
+                  </div>
+                  <div class="suporte">
+                    <div class="lembreDeMim">
+                      <span><input type="checkbox"></span>
+                      <span>Lembre-se de mim</span>
                     </div>
-                </div>
+                    <div class="ajuda">
+                      Precisa de ajuda?
+                    </div>
+                  </div>
+                  <div class="loginFooter">
+                    <div class="loginFace">
+                      <span><img src="../Resilia-Flix/img/fb-login.png" alt="fb"></span>
+                      <span><a href="#">Entre com o facebook</a></span>
+                    </div>
+                    <div class="signUp">
+                      <p>Novo no Resiliaflix? <a href="#">Cadastre-se.</a></p>
+                    </div>
+                    <div class="termos">
+                      <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.<a
+                          href="#">Saiba mais</a></p>
+                    </div>
+                </form>
+              </div>
             </div>
 
+          </div>
         </div>
+      </div>
+
     </div>
+  </div>
 
 </body>
 

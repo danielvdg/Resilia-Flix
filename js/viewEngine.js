@@ -328,7 +328,7 @@ $(document).delegate('.infoBotao','click', function(){
     url: `http://www.omdbapi.com/?i=${this.id}&apikey=fbde633c`,
     success: filme => {
         
-        const filmeModel = new FilmeModel(filme.Title, filme.Actors, filme.Director, filme.Year, filme.imdbRating, filme.Runtimem, filme.Released, filme.Plot, filme.Poster)  
+        const filmeModel = new FilmeModel(filme.Title, filme.Actors, filme.Director, filme.Year, filme.imdbRating, filme.Runtime, filme.Released, filme.Plot, filme.Poster)  
 
         const filmeController = new FilmeController()
 
@@ -347,8 +347,9 @@ function logar(){
     
     setTimeout(function () {
 
-    $('.deslogado').fadeOut()
+    $('.deslogado').hide()
     $('.logado').fadeIn()
+    $('html, body').animate({scrollTop:0}, 'slow');
     paginador.hide()
 
     }, 500)     
@@ -378,5 +379,18 @@ function logar(){
     
     }, 700) 
     
+}
+
+function deslogar(){
+
+    setTimeout(function () {
+        $('.sair').hide()
+        $('.deslogado').fadeIn()
+        $('.logado').fadeOut()
+        $('html, body').animate({scrollTop:0}, 'slow');
+        paginador.hide()
+    
+        }, 500) 
+
 }
 
