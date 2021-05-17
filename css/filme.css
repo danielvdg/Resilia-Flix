@@ -105,7 +105,7 @@ header{
     
 }
 
-#inputConteiner{
+/* #inputConteiner{
     
     background-color: #000000d1;
     color: white;
@@ -130,7 +130,7 @@ header{
 .inputCadastro{
 
     margin-left: 20px;
-  }
+  } */
   
   .form-cta button:hover {
     background: #f40612;
