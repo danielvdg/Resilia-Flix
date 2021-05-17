@@ -1,79 +1,16 @@
-
 * {
     margin: 0;
     padding: 0;
   }
-  
-  body {
-    font-family: sans-serif;
-    color: white;
-  }
-  
-  img {
-    display: block;
-    max-width: 100%;
-  }
-  
-  h1 {
 
-    color: white;
-  }
-  .container {
-    max-width: 1130px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  
-  
-  .header {
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-image: url(../img/netflix_codigos.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 30% 45%;
+  html{
     background-color: black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-
 }
 
-main{    
-    width: 100%; 
-    font-size: 30px;
-    color: rgb(0, 0, 0);     
-    display: flex;
-    justify-content: space-around;
-    align-items: center;    
-    flex-direction:column;
-
-}
-
-header{
-    width: 100%;
-    margin-bottom: 20px; 
-}
-
-#footerConteiner{
-    margin-top: 20px; 
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    background-color: black;
-    color: white;
-    align-self: flex-start;
-    padding: 8px 18px;
-    text-decoration: none;
-    border-radius: 3px;
+  body{
+      background-color: black;
   }
-  
-  
+
   .main {
     padding-top: 4rem;
     height: 785px;
@@ -90,11 +27,11 @@ header{
     display: flex;
     flex-wrap: wrap;
     padding-bottom:20px;
+    margin: 0 auto;
     
 }
 
-.error{
-    
+.error{    
     color:yellow;
     font-weight: bold;
     font-family: 'Bebas Neue', cursive;
@@ -102,118 +39,11 @@ header{
     letter-spacing: 1.5px;
     margin: 0 auto;
     align-self: center;
-    
-}
-
-/* #inputConteiner{
-    
-    background-color: #000000d1;
-    color: white;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    width: 80%;
-    height: auto;
-
-}
-
-.labelCadastro{
+    height: 300px;
     display: flex;
-    justify-content: flex-start;
-    margin: 0px 30px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    flex-direction: row;
-}
- 
-
-
-.inputCadastro{
-
-    margin-left: 20px;
-  } */
-  
-  .form-cta button:hover {
-    background: #f40612;
-  }
-  
-  .main p {
-    margin-top: 40px;
-    font-size: 19px;
-  }
-  
-  .gradient {
-    background: rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.8) 0,
-      rgba(0, 0, 0, 0) 60%,
-      rgba(0, 0, 0, 0.8) 100%
-    );
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  
-  
-  .section {
-    background: black;
-    padding: 3rem 0;
-    border-top: 8px solid #222;
-  }
-  
-  section h1 {
-    font-size: 50px;
-    margin-bottom: 16px;
-  }
-  
-  .section p {
-    font-size: 26px;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
     align-items: center;
-  }
-  
-  .img-tv {
-    position: relative;
-  }
-  
-  .img-tv img {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .video-tv {
-    width: 100%;
-    height: 50px;
-
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-#btnCadastrar {
-
-    font-size: 25px;
-    width: 20%;    
-    border-radius: 25px;
-    background-color: red;
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.error{
-
-    color:yellow;
-    font-weight: bold;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 45px;
-    letter-spacing: 1.5px; 
-}   
+    
+}  
         
 .pagina{
     display: flex;
@@ -222,6 +52,7 @@ header{
     align-items: baseline;
     background-color: #000000d1;
     width: 110px;
+    margin: 0 auto;
 }
 
 i{
@@ -258,14 +89,43 @@ input[type=number] {
 }
 
 .cardCustom img{
-    width: 75%;
+    width: 70%;
     min-width: 80%;
     max-height: max-content;
     min-height: 80%;
     margin-top: 15px;
     transition-timing-function: ease;
     transition-duration: 1.2ms;
-    transition-delay: .5ms;   
+    transition-delay: .5ms;  
+    margin-bottom: 20px; 
+    border: solid 2px rgba(255, 255, 255, 0.527) ;
+
+}
+
+#formBusca{    
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    
+}
+
+#formBusca button{
+    background-color: rgba(255, 255, 0, 0.637);
+    
+    
+
+}
+
+#formBusca input{
+    background-color: rgba(243, 243, 243, 0.397);
+    color: rgb(255, 255, 255);
+
+}
+
+#formBusca ::placeholder{
+    color: rgb(255, 251, 0);
 
 }
 
@@ -298,7 +158,7 @@ input[type=number] {
 .divBotao i{
     color:yellow;
     font-size: 25px;
-    max-height: 100%;
+      
 
 }
 
@@ -317,10 +177,65 @@ input[type=number] {
 
 }
 
+.secTopo{
+    background-color: yellow;
+    margin-top: 130px;
+
+}
+
+.imgCaro{
+
+    width: 70%;
+
+}
+
+#carouselExampleSlidesOnly{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.filmeInfo {   
+    background-color: rgba(255, 255, 255, 0.726);
+
+  }
+
+.resultados{
+    color: yellow;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 15px;
+
+}
+
+.ultimosLancamentos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+    font-family: 'Bebas Neue', cursive;
+    margin:0 auto;
+
+}
+
+.fechaModal{
+    background-color: yellow;
+
+}
+
+.loginBox h2{
+    text-align: center;
+
+}
+
+
 @media (max-width: 800px){
 
     .cardCustom{
         width: 50%;
+        margin: 0 auto;
+    }
+
+    #carouselExampleSlidesOnly{
+        width: 90%;
         margin: 0 auto;
     }
 
@@ -339,7 +254,7 @@ input[type=number] {
   @media (max-width: 600px){
 
     .cardCustom{
-        width: 80%;    
+        width: 100%;    
         margin: 0 auto;
     }
 
@@ -348,8 +263,42 @@ input[type=number] {
     }
   
     .cardCustom img{
-        width: 90%;     
+        width: 100%;     
     
+    }
+
+    #formBusca{    
+       flex-direction: column-reverse;      
+        
+    }
+
+    #carouselExampleSlidesOnly{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .secTopo{
+
+        margin-top: 100px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    
+    }
+
+    .loginBody {
+        padding: 15px;
+    
+    }
+
+    .signUp p{
+        font-size: 15px;
+        display: inline-block;
+
+    }
+    .signUp a{
+        font-size: 15px;
+        display: inline-block;
+
     }
   
   }

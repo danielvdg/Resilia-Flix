@@ -46,15 +46,13 @@ right: 0;
 .loginBody {
 
     padding: 50px;
-    z-index: 90;
-    position: relative;
-    max-width: 450px;
+    z-index: 90;    
     height: 630px;
-    margin-left: 50%;
+    margin: 0 auto;
     background: rgba(0, 0, 0, 0.932);
     border-radius: 10px;
     box-sizing: border-box;
-    transform: translateX(-50%);
+  
 
 }
 

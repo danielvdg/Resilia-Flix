@@ -1,6 +1,9 @@
 //VARIÁVEIS DO DOM
+$('.logado').hide()
 const main = $('#principal')
 const nomeBusca = $('#nomeBusca')
+nomeBusca.hide()
+var inputNomeBusca = true;
 const buscarFilme = $('#buscar')
 const quadro = $('.principal')
 const paginador = $('.pagina')
@@ -19,6 +22,8 @@ var loader = `
 //FUNÇÃO QUE IMPRIME OS FILMES NA DIV PRINCIPAL
 function impressoraDeFilmes(arr) {
 
+    quadro.html(`${loader}`)
+    
     arr.forEach(element => {         
 
             var botoes = `
@@ -48,73 +53,97 @@ function impressoraDeFilmes(arr) {
 
     });
 
+    $('#loader').hide()
    // }
 }
 
 //BUSCADOR DE FILME
 buscarFilme.on('click', function (e) {
 
-    e.preventDefault()
-
-    quadro.html(`${loader}`)
-
-    let nomeFilme = nomeBusca.val()
-
-    if (nomeFilme.length <= 0) {
-
-        quadro.html('<span class="error">Ooops... você não digitou nada!</span>')
-        paginador.hide()
-
+    if(inputNomeBusca == true){
+        nomeBusca.fadeIn()
+        inputNomeBusca = false
+    }else{
+        nomeBusca.fadeOut()
+        inputNomeBusca = true
     }
-    else {
+    
 
-        $.ajax({
+})
 
-            url: `http://www.omdbapi.com/?s=${nomeFilme}&type=movie&apikey=fbde633c`,
-            success: filme => {
+nomeBusca.on('keyup', function (){
 
-                filmes = filme.Search
+    if(nomeBusca.val().length >= 3){
+        let nomeFilme = nomeBusca.val()
 
-                console.log(filme)
-
-                if (typeof filmes == 'undefined') {
-
-                    quadro.html('<span class="error">Ooops... Filme não encontrado</span>')
-
-                } else {
-
-                    let totalResults = parseInt(filme.totalResults)
-
-                    setTimeout(function () {
-
-                        $('#loader').hide()
-
-                        impressoraDeFilmes(filmes)
-
-                    }, 500)
-
-                    if (totalResults > 10) {
-
-                        paginador.show()
-                        numPagina.val('1')
-                        retornaPaginaFilme.hide()
-                        console.log()
-
-                    } else {
+        
+    
+            $.ajax({
+    
+                url: `http://www.omdbapi.com/?s=${nomeFilme}&type=movie&apikey=fbde633c`,
+                success: filme => {
+    
+                    filmes = filme.Search
+    
+                    console.log(filme)
+    
+                    if (typeof filmes == 'undefined') {
+    
+                        $('.resultados').text("")
+    
+                        quadro.html('<span class="error">Ooops... Filme não encontrado</span>')
                         paginador.hide()
-
+    
+                    } else {
+    
+                        let totalResults = parseInt(filme.totalResults)
+    
+                        setTimeout(function () {
+    
+                            $('#loader').hide()
+    
+                            impressoraDeFilmes(filmes)
+    
+                            $('.resultados').text(`${totalResults} ${totalResults > 1 ? "resultados" : "resultado"}`)
+    
+                            if (totalResults > 10) {
+    
+                                paginador.show()
+                                numPagina.val('1')
+                                retornaPaginaFilme.hide()
+                                console.log()
+        
+                            } else {
+                                paginador.hide()
+        
+                            }
+    
+                        }, 500)
+    
+                        
                     }
                 }
-            }
-        })
+            })
+        
+
     }
+    else{
+        if (nomeBusca.val() == "") {
+    
+            logar()
+            $('.resultados').text("Melhores filmes")
+    
+        }
+    }
+
+  
 })
 
 
 //PAGINADOR PARA RETORNO DA PÁGINA
 retornaPaginaFilme.on('click', function () {
 
-    quadro.html(`${loader}`)
+    
 
     let nomeFilme = nomeBusca.val()
 
@@ -167,7 +196,7 @@ retornaPaginaFilme.on('click', function () {
 //PAGINADOR PARA AVANÇO DA PÁGINA
 avancaPaginaFilme.on('click', function () {
 
-    quadro.html(`${loader}`)
+    
 
     let nomeFilme = nomeBusca.val()
 
@@ -250,7 +279,6 @@ numPagina.on('blur', function () {
             else {
                 retornaPaginaFilme.hide()
             }
-
         }
     })
 
@@ -282,8 +310,7 @@ linkFilme.on('click', function(){
                     impressoraDeFilmes(arrFilmes)
         
                 }
-            })          
-    
+            })             
         }
     
         $('#loader').hide()  
@@ -315,4 +342,41 @@ $(document).delegate('.infoBotao','click', function(){
 })          
 
 })
+
+function logar(){
+    
+    setTimeout(function () {
+
+    $('.deslogado').fadeOut()
+    $('.logado').fadeIn()
+    paginador.hide()
+
+    }, 500)     
+
+    setTimeout(function () {
+
+        let filmesPrincipais = ["tt0371746", "tt0458339", "tt2015381", "tt2395427", "tt0478970", "tt1843866", "tt2250912", "tt1825683", "tt4154756", "tt5095030", "tt4154664", "tt4154796"]
+    
+        let arrFilmes = []
+        
+        for(let i = 0; i < filmesPrincipais.length; i++){            
+    
+            $.ajax({
+    
+                url: `http://www.omdbapi.com/?i=${filmesPrincipais[i]}&apikey=fbde633c`,
+                success: filme => {
+                    
+                    arrFilmes.push(filme)    
+                    $('#loader').hide()        
+                    impressoraDeFilmes(arrFilmes)
+        
+                }
+            })          
+        }
+    
+        $('#loader').hide()  
+    
+    }, 700) 
+    
+}
 
