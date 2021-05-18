@@ -255,6 +255,8 @@ input[type=number] {
 
 .titulosModalInfo{
     text-align: center;
+    color: yellow;
+    font-family: 'Bebas Neue', cursive;    
 
 }
 
