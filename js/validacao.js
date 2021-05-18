@@ -17,26 +17,6 @@ let form = document.querySelector("#form-conteiner")
 let erros = document.querySelectorAll(".mensagens-erros")
 let verificar = document.querySelectorAll(".verificar")
 
-
-btnCadastrar.addEventListener("click",function(e){
- e.preventDefault()
-                 
-    validaNome(nome)
-    validaEmail(email)
-    validaSenha(senha)
-    validaConfirmacao(senha, confirmacaoSenha)
-    validaRg(rg)
-    validaData(data)
-    validaCep(cep)
-    validaRua(rua)
-    validaNumero(numero)
-    validaComplemento(complemento)
-    validaBairro(bairro)
-    validaCidade(cidade)
-    validaUf(uf)
-});
-
-
 function validaNome (nome){
     
    let nomeCompleto = nome.value.split(" ")
@@ -49,11 +29,9 @@ function validaNome (nome){
     }else{
         erros[0].classList.add("mensagens-erros")
         verificar[0].classList.remove("verificar")
-        
+
         
     }
-    
-
 
 }
 
@@ -130,10 +108,8 @@ function validaRg(rg) {
 }
 
 function validaData(data) {
-    const dataAtual = new Date();
-    const dataDeNascimento = data.value
-    let idade = dataAtual - dataDeNascimento
-    if(idade >= 18){
+  
+    if(data.value.length != 0){
         verificar[5].classList.remove("verificar")
         erros[5].classList.add("mensagens-erros")
 
@@ -211,3 +187,22 @@ function validaUf(uf) {
 
     }
 }
+
+btnCadastrar.addEventListener("click",function(e){
+    e.preventDefault()
+                    
+    validaNome(nome)
+    validaEmail(email)
+    validaSenha(senha)
+    validaConfirmacao(senha, confirmacaoSenha)
+    validaRg(rg)
+    validaData(data)
+    validaCep(cep)
+    validaRua(rua)
+    validaNumero(numero)
+    validaComplemento(complemento)
+    validaBairro(bairro)
+    validaCidade(cidade)
+    validaUf(uf)
+});
+

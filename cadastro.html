@@ -42,8 +42,7 @@
   <form  id="form-conteiner">
         <fieldset class="formularios-principal">
             <legend>Infomações Básicas</legend>
-            
-            <br>
+             <br>
             <label class="labelCadastro" >Nome Completo*: <br>
             <input name="nome" type="text" id="nome" class="inputCadastro"  size="60" required/></label><span class="mensagens-erros">❌</span><span class="verificar">✔️</span><br>
               
@@ -59,31 +58,28 @@
             <label class="labelCadastro" >Confimação de Senha*: <br>
             <input name="confirmacaoSenha" type="password" id="confirmacaoSenha" class="inputCadastro" size="20" required ><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></label></label><br>
             <p class="requisitos">mínimo de 6 caracteres</p> 
-            
-            <br><br>
+             <br><br>
 
         </fieldset>
     </section>
-
         <section class="section">
             <fieldset class="formulario-secundario">
                 <legend>Informações Pessoais</legend>
+              
                 <label class="labelCadastro" >RG*: <br>
                 <input name="rg" type="text" id="rg" class="inputCadastro"  maxlength="9" required ></label><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></label><br>
-                
                 <br>
                 <label class="labelCadastro" >Data de Nascimento* <br>
                 <input type="date" id="data" class="inputCadastro" required ></label><span class="mensagens-erros">❌</span><span class="verificar">✔️</span><br>
                 
                 <br><br>
                 <legend>Endereço</legend>
-
-                <label class="labelCadastro" >Rua: <br>
-                <input  type="text" id="rua" class="inputCadastro" size="60"  /></label><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></label><br>    
-                
-                <br>
+               
                 <label class="labelCadastro" >Cep*: <br>
                 <input type="text" id="cep" class="inputCadastro" maxlength="8" required /></label ><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></label><br>
+                <br>
+                <label class="labelCadastro" >Rua: <br>
+                <input  type="text" id="rua" class="inputCadastro" size="60"  /></label><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></label><br>  
                 
                 <br>
                 <label class="labelCadastro" >Número: <br>
@@ -105,10 +101,13 @@
                 <label class="labelCadastro">Estado: <br>
                 <input type="text" id="uf" class="inputCadastro" size="5" /></label><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></label><br>
 
+       
             </fieldset>
             
             <br>
         <button id="btnCadastrar">Cadastrar-se</button>  
+       <p>*Campos Obrigatórios</p>  
+
 
   </form>  
 </section>
