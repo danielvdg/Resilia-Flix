@@ -22,7 +22,6 @@ function validaNome (nome){
    let nomeCompleto = nome.value.split(" ")
     console.log(nomeCompleto);
     if(nomeCompleto.length < 2){
-        $(".mensagens-erros")[0]
         erros[0].classList.remove("mensagens-erros")
         verificar[0].classList.add("verificar")
         
