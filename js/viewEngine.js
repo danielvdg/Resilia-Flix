@@ -14,7 +14,7 @@ const linkFilme = $('#linkFilme')
 var numPagina = $('#numPagina')
 var filmes = []
 var loader = ` 
-            <div id='loader' class="spinner-border text-warning" role="status">
+            <div id='loader' class="spinner-border text-warning loaderLogin" role="status">
             <span class="sr-only">Loading...</span>
             </div> 
             `
@@ -339,10 +339,11 @@ $(document).delegate('.infoBotao','click', function(){
 
 function logar(){
     
-    setTimeout(function () {
+    $('#pgQEA').hide()
 
-    $('.deslogado').hide()
-    $('.logado').fadeIn()
+    setTimeout(function () {
+    
+    $('.logado').fadeIn()    
     
     paginador.hide()
 
@@ -375,16 +376,50 @@ function logar(){
     
 }
 
-function deslogar(){
+function deslogar(){    
 
     setTimeout(function () {
         $('.sair').hide()
         $('.deslogado').fadeIn()
         $('.logado').fadeOut()
+        $('#pgQEA').hide()
         $('html, body').animate({scrollTop:0}, 'slow');
         paginador.hide()
-    
+        $("#logar").show()
+        $("#loaderLogin").hide()
         }, 500) 
 
 }
 
+$('form').submit(false)
+
+$(document).delegate('#logar', 'click', function(e){
+
+    e.preventDefault();
+
+    let login = $('#txtLogin').val()
+    let senha = $('#txtSenha').val()
+
+   if(senha == "admin" && login == "admin"){
+
+        $("#logar").hide()
+
+        $("#loaderLogin").fadeIn()
+
+        setTimeout(function(){
+            
+            paginaQEA()            
+
+        }, 1000)      
+   }
+
+})
+
+function paginaQEA(){
+
+    $(".deslogado").hide()
+    $(".fechaModal").click()
+    $(".logadoSair").fadeIn()
+    $('#pgQEA').fadeIn()    
+
+}
