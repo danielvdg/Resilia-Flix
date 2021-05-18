@@ -74,9 +74,7 @@ buscarFilme.on('click', function (e) {
 nomeBusca.on('keyup', function (){
 
     if(nomeBusca.val().length >= 3){
-        let nomeFilme = nomeBusca.val()
-
-        
+        let nomeFilme = nomeBusca.val()        
     
             $.ajax({
     
@@ -141,9 +139,7 @@ nomeBusca.on('keyup', function (){
 
 
 //PAGINADOR PARA RETORNO DA PÁGINA
-retornaPaginaFilme.on('click', function () {
-
-    
+retornaPaginaFilme.on('click', function () {    
 
     let nomeFilme = nomeBusca.val()
 
@@ -194,9 +190,7 @@ retornaPaginaFilme.on('click', function () {
 })
 
 //PAGINADOR PARA AVANÇO DA PÁGINA
-avancaPaginaFilme.on('click', function () {
-
-    
+avancaPaginaFilme.on('click', function () {    
 
     let nomeFilme = nomeBusca.val()
 
@@ -349,7 +343,7 @@ function logar(){
 
     $('.deslogado').hide()
     $('.logado').fadeIn()
-    $('html, body').animate({scrollTop:0}, 'slow');
+    
     paginador.hide()
 
     }, 500)     
