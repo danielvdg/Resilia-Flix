@@ -79,7 +79,7 @@ right: 0;
 }
 
 .inputTopo {
-
+    text-align: center;
     margin-bottom: 25px;
 
 }
@@ -126,7 +126,6 @@ right: 0;
 }
 
 .loginFace {
-
     display: flex;
     align-items: center;
     width: 100%;
