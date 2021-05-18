@@ -1,6 +1,5 @@
 // quando inserir algum valor no meu cep execute
 $("#cep").on("blur",function (){
-    
     //pegando meu valor do input cep
     const numCep = $("#cep").val()
 
@@ -12,23 +11,34 @@ $("#cep").on("blur",function (){
 
 //função que requisição esta buscando os dados da api
 function requisicao (numCep){
-    
     let url = `https://viacep.com.br/ws/${numCep}/json/`
     
     $.ajax({
         url : url,
         success : function (resposta){
-           
             const cep = mostraCep(resposta)
             console.log(resposta);
-          
             mostraNaTela(cep)
             
         }
         
     })
     
-}
+}    
+// try{
+//     if(resposta != 200){
+//         throw new Error("Cep Inválido")
+     
+//     }else{
+        
+//     }              
+    
+// }catch(e){
+//     success(`ERRO:${e.message}` )
+//     console.log(`Mensagem de erro: ${e.message}`); 
+// } 
+
+
 
 //funçao onde recebe um objeto
 function mostraCep(resposta){
