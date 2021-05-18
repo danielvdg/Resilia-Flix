@@ -29,6 +29,7 @@ function validaNome (nome){
     }else{
         erros[0].classList.add("mensagens-erros")
         verificar[0].classList.remove("verificar")
+
         
     }
 
@@ -107,7 +108,7 @@ function validaRg(rg) {
 }
 
 function validaData(data) {
-    
+  
     if(data.value.length != 0){
         verificar[5].classList.remove("verificar")
         erros[5].classList.add("mensagens-erros")
@@ -121,7 +122,6 @@ function validaData(data) {
 }
 
 function validaCep(cep) {
-    
     if (cep.value.length == 8 ){
         verificar[6].classList.remove("verificar")
         erros[6].classList.add("mensagens-erros")
