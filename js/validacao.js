@@ -256,13 +256,13 @@ complemento.addEventListener("blur", ()=>{
 
 btnCadastrar.addEventListener("click",function(e){
     e.preventDefault()
-    validacao = [
+    console.log(validacao = [
     validaNome(nome),
     validaEmail(email),
     validaSenha(senha),
     validaConfirmacao(senha, confirmacaoSenha),
     validaRg(rg),validaData(data),
-    validaCep(cep)]
+    validaCep(cep)])
 
     
     validaNome(nome)
@@ -279,17 +279,11 @@ btnCadastrar.addEventListener("click",function(e){
     validaCidade(cidade)
     validaUf(uf)
 
-    for(let i = 0 ;i < validacao.length ; i ++){
+    const deuCerto = validacao.every((verdadeiro)=>verdadeiro)
 
-        if (validacao[i] == true){
-            console.log("Certo");
-            
-        }else{
+    console.log(deuCerto)
+
     
-            console.log("erro");
-        }
-
-    }
     
 });
 console.log(btnCadastrar.value)
