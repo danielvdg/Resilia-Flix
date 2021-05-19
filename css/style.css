@@ -519,16 +519,7 @@ width: 100%;
     border: 1px solid grey;
   }
 
-  #btnCadastrar {
-    background-color: #f4d11e ;
-    height: 50px;
-    width: 170px;
-    margin: 0 auto;
-    color: #2c2c2c;
-    font-weight: bold;
-    border: 1px solid #2c2c2c;
-    border-radius: 4px;
-  }
+ 
 
   .termos {
 
