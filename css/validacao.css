@@ -9,3 +9,160 @@
 
 }
 
+.cadastroTransp {   
+    
+    
+    margin-top: 130px; 
+    
+
+    
+  }
+
+ .cadastroTransparente{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0);
+    padding: 25px;  
+
+ }
+
+.inputNomeTxt{
+    display: flex;
+    width: 100%;
+
+}
+
+.inputEmailTxt{
+    display: flex;
+    width: 100%;
+
+}
+
+.inputSenhaTxt{
+    display: flex;
+    width: 100%;
+
+}
+
+.inputSenhaCTxt{
+    display: flex;
+    width: 100%;
+
+}
+
+.inputRgTxt{
+    display: flex;
+    width: 100%;
+
+}
+
+.inputData{
+    display: flex;
+    width: 100%;
+
+}
+
+.inputCEP{
+    display: flex;
+    width: 100%;
+
+}
+
+.inputRua{
+    display: flex;
+    width: 100%;
+
+}
+
+.inputNumero{
+    display: flex;
+    width: 100%;
+
+}
+
+.InputComple{
+    display: flex;
+    width: 100%;
+    
+
+}
+
+.inputBairro{
+    display: flex;
+    width: 100%;
+
+}
+
+.inputCidade{
+    display: flex;
+    width: 100%;
+
+}
+
+.inputEstado{
+    display: flex;
+    width: 100%;
+
+}
+
+.txtLabel{
+    width: 16%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.txtInput{
+    width: 70%;
+    
+
+}
+
+.confirmaSenha{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+  #form-conteiner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+  }  
+
+label{
+     color: rgb(255, 255, 255);
+     display: flex;
+    
+  }  
+
+  #btnCadastrar{
+    margin: 0 auto;
+  }
+
+  @media (max-width: 760px){
+
+    label{
+        color: rgb(255, 255, 255);
+        display: flex;
+        font-size: 10px;
+       
+        white-space: nowrap;
+     }  
+
+     .txtLabel{
+        width: 35%;
+        display: flex;
+        justify-content: flex-end;
+    
+    }
+   
+   
+
+
+  }

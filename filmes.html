@@ -20,6 +20,8 @@
 
   <link rel="stylesheet" href="css/bootstrap.css">
 
+  <link rel="stylesheet" href="css/validacao.css">
+
   <link rel="stylesheet" href="css/login.css">
 
   <link rel="stylesheet" href="css/filme.css">
@@ -30,7 +32,7 @@
 
 </head>
 
-<body>
+<body class='p-0'>
 
   <header class="header">
 
@@ -60,7 +62,100 @@
     <div class="gradient"></div>
   </main>
 
-  </div>
+  <section class="cadastroTransp deslogado">
+
+    <h2>Cadastre-se</h2>
+
+    <div class="cadastroTransparente">
+
+      <form  id="form-conteiner">
+        <fieldset class="formularios-principal">
+
+            <legend>Informações Básicas</legend>  
+
+            <div class="inputNomeTxt"> <div class="txtLabel"><label class="labelCadastro" >Nome Completo*: </label></div>
+            <div class="txtInput"><input name="nome" type="text" id="nome" class="inputCadastro" required/><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div></div>        
+            
+            
+            <div class="inputEmailTxt"><div class="txtLabel"><label class="labelCadastro" > E-mail*:</label></div>
+            <div class="txtInput"><input name="email" type="email" id="email" class="inputCadastro" required ><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div></div>         
+
+            <div class="inputSenhaTxt">
+              <div class="txtLabel"><label class="labelCadastro" >Senha*:</label></div>
+              <div></div>
+
+              <div> <div class="txtInput"> <input name="senha" type="password" id="senha" class="inputCadastro" minlength="6" required ><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div>      
+                  
+              <p class="requisitos">mínimo de 6 caracteres</p> </div>
+           
+            </div>
+                    
+            <div class="inputSenhaCTxt">
+            <div class="txtLabel"><label class="labelCadastro" >Confimação de Senha*: </label></div>
+            <div> <div class="txtInput"><input name="confirmacaoSenha" type="password" id="confirmacaoSenha" class="inputCadastro" required ><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div>            
+            
+            <p class="requisitos">mínimo de 6 caracteres</p> </div>
+           
+            </div>
+            
+           
+  
+        </fieldset>
+    
+        <fieldset class="formulario-secundario">
+
+            <legend>Informações Pessoais</legend>
+            
+            <div class="inputRgTxt"><div class="txtLabel"><label class="labelCadastro" >RG*:</label> </div>
+            <div class="txtInput"><input name="rg" type="text" id="rg" class="inputCadastro"  maxlength="9" required ><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div>  
+          </div>
+
+          <div class="inputData"> <div class="txtLabel"><label class="labelCadastro" >Data de Nascimento* </label></div>
+          <div class="txtInput"><input type="date" id="data" class="inputCadastro" required ><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div> 
+        </div>            
+                       
+        </fieldset>
+  
+        <fieldset class="formulario-secundario">
+            <legend>Endereço</legend>
+
+            <div class="inputCEP"><div class="txtLabel"><label class="labelCadastro" >Cep*: </label></div>
+            <div class="txtInput"><input type="text" id="cep" class="inputCadastro" maxlength="8" required /><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div>
+          </div>      
+          
+          <div class="inputRua"><div class="txtLabel"><label class="labelCadastro" >Rua: </label></div>
+          <div class="txtInput">  <input  type="text" id="rua" class="inputCadastro"/></label><span class="mensagens-erros">❌</span><span class="verificar">✔️</span> </div> </div>                 
+
+          <div class="inputNumero"><div class="txtLabel"><label class="labelCadastro" >Número: </label></div>
+          <div class="txtInput"><input  type="text" id="numero" class="inputCadastro"/></label><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div></div>          
+
+          <div class="InputComple"> <div class="txtLabel"><label class="labelCadastro" >Complemento: </label></div>
+          <div class="txtInput"><input type="text" id="complemento" class="inputCadastro"/><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div></div>
+         
+
+          <div class="inputBairro"><div class="txtLabel"><label class="labelCadastro">Bairro:</label></div>
+          <div class="txtInput"><input  type="text" id="bairro" class="inputCadastro"  /><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div> </div>                  
+            
+          <div class="inputCidade"><div class="txtLabel"><label class="labelCadastro">Cidade:</label> </div>
+          <div class="txtInput"> <input  type="text" id="cidade" class="inputCadastro"  /><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div> </div>
+           
+          <div class="inputEstado"><div class="txtLabel"><label class="labelCadastro">Estado: </label></div>
+          <div class="txtInput"><input type="text" id="uf" class="inputCadastro" /><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div> </div>
+       
+    
+        </fieldset>            
+        
+        <button id="btnCadastrar">Cadastrar-se</button> 
+        <p style="text-align: center;">*Campos Obrigatórios</p>  
+  
+    </form>  
+
+    </div>
+
+  </section>
+
+
+
 
   <section class="section deslogado">
     <div class="container">
@@ -230,11 +325,35 @@
       <h1>Perguntas frequentes</h1>
       <dl class="faq-list">
         <dt class="faq-question">O que é a Resiliaflix?</dt>
-     
+
+        <dd class="faq-answer">
+          <div>
+            A Resiliaflix é um serviço de transmissão online que oferece uma ampla variedade de séries, filmes e
+            documentários premiados em milhares de aparelhos conectados à internet.
+            
+            Você pode assistir a quantos filmes e séries quiser, quando e onde quiser, sem comerciais – tudo por um
+            preço mensal bem acessível. Aqui você sempre encontra novidades. A cada semana, adicionamos novas séries e
+            filmes.
+          </div>
+        </dd>
+
         <dt class="faq-question">Quanto custa a Resiliaflix?</dt>
        
         <dt class="faq-question">Onde posso assistir?</dt>
-        
+
+        <dd class="faq-answer">
+          <div>
+            Assista onde quiser, o quanto quiser e em um número ilimitado de aparelhos. Faça login com sua conta
+            Resiliaflix em Resiliaflix.com para começar a assistir no computador ou em qualquer aparelho conectado à
+            Internet compatível com o aplicativo Resiliaflix, como Smart TVs, smartphones, tablets, aparelhos de
+            streaming e videogames.
+            
+            Você também pode baixar a sua série favorita com o aplicativo Resiliaflix para iOS, Android ou Windows 10.
+            Use downloads para levar a Resiliaflix para onde quiser sem precisar de conexão com a Internet. Leve a
+            Resiliaflix com você para qualquer lugar.
+          </div>
+        </dd>
+
         <dt class="faq-question">Como faço para cancelar?</dt>
         
         <dt class="faq-question">O que eu posso assistir na Resiliaflix?</dt>
@@ -325,6 +444,8 @@
   <script src="js/src/Models/filme-model.js"></script>
   <script src="js/src/Views/filme-view.js"></script>
   <script src="js/viewEngine.js"></script>
+  <script src="js/cadastro.js"></script>
+  <script src="js/validacao.js"></script>
 
   <div class="modal fade modallogin" tabindex="-1" id="formLogin">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md">
