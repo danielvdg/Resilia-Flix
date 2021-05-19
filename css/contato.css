@@ -120,6 +120,9 @@
 
 transform: translateY(0);
 transition-delay: 0.5s;
+color: rgb(164, 168, 168);
+text-align: center;
+
 
 }
 
@@ -130,15 +133,28 @@ transition-delay: 0.5s;
   transition: 0.5s;
   font-size: 14px;
   
+    
   }
 
-  .container .box:hover .conteudo p {
+.container .box:hover .conteudo p {
 
-    transform: translateY(0);
-    transition-delay: 0.6s;
+  transform: translateY(0);
+  transition-delay: 0.6s;   
+  margin: 0 auto;  
     
-    }
+    
+  }
   
+.container .box .conteudo a {
+
+  text-decoration: none;
+  
+  }
+
+ul
+{  
+  display: flex;  
+}
 
 /*-----------------------------*/
 .contato {    
@@ -147,7 +163,7 @@ transition-delay: 0.5s;
 }
 
 
-  @media (max-width: 600px){
+  @media (max-width: 300px){
 
    
 .contato {
