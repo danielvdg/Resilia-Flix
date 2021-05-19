@@ -256,7 +256,6 @@ complemento.addEventListener("blur", ()=>{
 
 btnCadastrar.addEventListener("click",function(e){
     e.preventDefault()
-
     validacao = [
     validaNome(nome),
     validaEmail(email),
@@ -264,6 +263,7 @@ btnCadastrar.addEventListener("click",function(e){
     validaConfirmacao(senha, confirmacaoSenha),
     validaRg(rg),validaData(data),
     validaCep(cep)]
+
     
     validaNome(nome)
     validaEmail(email)
@@ -283,7 +283,6 @@ btnCadastrar.addEventListener("click",function(e){
 
         if (validacao[i] == true){
             console.log("Certo");
-           
             
         }else{
     
