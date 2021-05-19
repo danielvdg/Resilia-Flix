@@ -255,11 +255,70 @@ input[type=number] {
 
 .titulosModalInfo{
     text-align: center;
+    color: yellow;
+    font-family: 'Bebas Neue', cursive;    
 
 }
 
 .sair{
     display: none;
+}
+
+.QEA{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.QEA div h2{
+    text-align: center;
+}
+
+.imgQEA{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.tituloQEA{
+    color: yellow;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;    
+
+}
+
+.gerenciarDiv{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+#loaderLogin{
+    display: none;
+    text-align: center;
+    margin:0 auto;
+}
+
+#pgQEA{
+    display: none;
+}
+
+.logoLogin{
+    width: 70%;
+    margin: 0 auto 20px auto;
+
+}
+
+.loginBox h2{
+    font-family: 'Bebas Neue', cursive;
+    
 }
 
 @media (max-width: 800px){
@@ -287,9 +346,11 @@ input[type=number] {
       font-size: 15px;
     
     }
+
+    .tituloQEA{        
+        font-size: 25px;    
     
- 
-  
+    }
   
   }
 
@@ -346,6 +407,11 @@ input[type=number] {
     .letraEspacamento{
         font-size: 15px;
       
+      }    
+      
+      .imgQEA{
+        flex-direction: column;
+        
       }
   
   }

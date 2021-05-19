@@ -33,8 +33,9 @@
 
     <img src="img/sf.png" alt="Resiliaflix" draggable="false" />
 
-    <div class="link-flex"> <a href="#topo" class="deslogado" data-bs-toggle="modal" data-bs-target="#formLogin">Login</a>
-      <a href="#topo" class="logado sair">Sair</a>
+    <div class="link-flex"> <a href="#topo" class="deslogado" data-bs-toggle="modal"
+        data-bs-target="#formLogin">Login</a>
+      <a href="#topo" class="logadoSair sair">Sair</a>
 
     </div>
 
@@ -112,6 +113,47 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="pgQEA"class="section secTopo">
+
+    <div class="QEA">
+
+      <div>
+        <h2 class="tituloQEA">Quem está assistindo?</h2>
+      </div>
+
+      <div class="imgQEA">
+        <div id="img1" class="mx-1">
+          <img src="../Resilia-Flix/img/antonio.png" alt="antonioprofile">
+          <h3>Antônio</h3>
+        </div>
+
+        <div id="img2" class="mx-1">
+          <img src="../Resilia-Flix/img/daniel.png" alt="antonioprofile">
+          <h3>Daniel</h3>
+        </div>
+
+        <div id="img3" class="mx-1">
+          <img src="../Resilia-Flix/img/kellen.png" alt="antonioprofile">
+          <h3>Kellen</h3>
+        </div>
+
+        <div id="img4" class="mx-1">
+          <img src="../Resilia-Flix/img/nathalia.png" alt="antonioprofile">
+          <h3>Nathalia</h3>
+        </div>
+      </div>
+
+      <div class="gerenciarDiv">
+        <span class="gerenciar" class="mx-2">
+          gerenciar perfis
+        </span>
+      </div>
+
+    </div>
+
+
   </section>
 
   <section class="section logado secTopo">
@@ -195,9 +237,50 @@
             filmes.
           </div>
 
+/*
         </div>
       </section>
       
+
+        </dd>
+        <dt class="faq-question">Quanto custa a Resiliaflix?</dt>
+        <dd class="faq-answer">
+          <div>
+            Assista à Resiliaflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa
+            mensal única. Os planos variam de R$21,90 a R$45,90 por mês. Sem contrato nem taxas extras.
+          </div>
+        </dd>
+        <dt class="faq-question">Onde posso assistir?</dt>
+        <dd class="faq-answer">
+          <div>
+            Assista onde quiser, o quanto quiser e em um número ilimitado de aparelhos. Faça login com sua conta
+            Resiliaflix em Resiliaflix.com para começar a assistir no computador ou em qualquer aparelho conectado à
+            Internet compatível com o aplicativo Resiliaflix, como Smart TVs, smartphones, tablets, aparelhos de
+            streaming e videogames.<br>
+            <br>
+            Você também pode baixar a sua série favorita com o aplicativo Resiliaflix para iOS, Android ou Windows 10.
+            Use downloads para levar a Resiliaflix para onde quiser sem precisar de conexão com a Internet. Leve a
+            Resiliaflix com você para qualquer lugar.
+          </div>
+        </dd>
+        <dt class="faq-question">Como faço para cancelar?</dt>
+        <dd class="faq-answer">
+          <div>
+            A Resiliaflix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na internet com
+            apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua assinatura a qualquer
+            momento.
+          </div>
+        </dd>
+        <dt class="faq-question">O que eu posso assistir na Resiliaflix?</dt>
+        <dd class="faq-answer">
+          <div>
+            A Resiliaflix tem um grande catálogo de filmes, documentários, séries, originais Resiliaflix premiados e
+            muito mais. Assista o quanto quiser, quando quiser.
+          </div>
+        </dd>
+      </dl>
+    </section>
+
     <form class="form-cta deslogado">
       <input type="text" placeholder="Email" />
       <button>Vamos lá</button>
@@ -221,11 +304,11 @@
 
               <div class="col-12 col-md-6">
 
-                <div class="row"> 
+                <div class="row">
 
-                  <img id="imgFilme" src="" class="imgModal d-block">   
+                  <img id="imgFilme" src="" class="imgModal d-block">
                   <span id="lancamentoEDuracao" class="my-2"></span>
-                </div>               
+                </div>
 
               </div>
               <div class="col-12 col-md-6 align-self-end my-2">
@@ -233,17 +316,17 @@
                 <h4 class="titulosModalInfo align-self-center">Informações</h4>
 
                 <h5 class="titulosModal">Sinopse</h5>
-                <span class="spanModal" id="sinopse">                  
+                <span class="spanModal" id="sinopse">
                 </span>
 
                 <h5 class="my-1 titulosModal">Diretor</h5>
-                <span class="spanModal" id="diretor"> 
-                                   
+                <span class="spanModal" id="diretor">
+
                 </span>
 
                 <h5 class="my-1 titulosModal">Elenco</h5>
                 <span class="spanModal" id="elenco">
-                                    
+
                 </span>
 
 
@@ -287,20 +370,24 @@
       <div class="modal-content">
         <div class="modal-body">
           <div class="container-fluid">
-            <button type="button" class="btn-close fechaModal" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close fechaModal d-none" data-bs-dismiss="modal" aria-label="Close"></button>
 
-            <div class="loginBody">
+            <div class="loginBody">             
+              <img class="logoLogin" src="img/sf.png">
               <div class="loginBox">
                 <h2>Login</h2>
                 <form>
                   <div class="inputTopo">
-                    <input type="text" placeholder="Email ou telefone">
+                    <input type="text" id="txtLogin" placeholder="Email ou telefone">
                   </div>
                   <div class="inputTopo">
-                    <input type="text" placeholder="Senha">
+                    <input type="password" id="txtSenha" placeholder="Senha">
                   </div>
-                  <div class="inputTopo">
-                    <button>Sign in</button>
+                  <div class="inputTopo inputLogin">
+                    <div id='loaderLogin' class="spinner-border text-warning" role="status">
+                      <span class="sr-only">Loading...</span>
+                      </div>
+                    <button id="logar">Sign in</button>
                   </div>
                   <div class="suporte">
                     <div class="lembreDeMim">

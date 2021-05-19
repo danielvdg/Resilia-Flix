@@ -42,14 +42,16 @@
   }
   
   .header a {
-   
+    font-weight: bold;
     background: #ffff00;
+
     color: #2c2c2c;
     align-self: flex-start;
     padding: 8px 18px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+
   }
   
   .header a:hover {
@@ -419,11 +421,11 @@
   }
 
   h3 {
-    color: grey;
-    font-family: sans-serif;
+    font-family: 'Bebas Neue', cursive; 
+    color: yellow;
     text-align: center;
     text-transform: none;
-    font-size: 17px;
+    font-size: 30px;
     margin-top: 5px;
     }
 
@@ -432,80 +434,61 @@
     border-radius: 4px;
   }
 
-  #img1 {
-
-    height: 10vw;
-    width: 10vw;
-    max-height: 200px;
-    max-width: 200px;
-    min-height: 84px;
-    min-width: 84px;
-    display: inline-block;
-    margin-left: 240px;
+  #img1 {    
+    width: 20%;
+    height: 20%;
     
+    
+    display: inline-block;
+
   }
   
   #img2 {
-
-    height: 10vw;
-    width: 10vw;
-    max-height: 200px;
-    max-width: 200px;
-    min-height: 84px;
-    min-width: 84px;
+    width: 20%;
+    height: 20%;
     display: inline-block;
-    margin-left: 30px;
 
   }
 
   #img3 {
-    height: 10vw;
-    width: 10vw;
-    max-height: 200px;
-    max-width: 200px;
-    min-height: 84px;
-    min-width: 84px;
+    width: 20%;
+    height: 20%;
     display: inline-block;
-    margin-left: 30px;
-
     
   }
 
   #img4 {
 
-    height: 10vw;
-    width: 10vw;
-    max-height: 200px;
-    max-width: 200px;
-    min-height: 84px;
-    min-width: 84px;
+    width: 20%;
+    height: 20%;
     display: inline-block;
-    margin-left: 30px;
     
   }
 
   .gerenciar {
-
-    display: block;
-    width: 250px;
-    margin: 2em 0 1em 0;
-    font-size: 1.2vw;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;  
+    display: block;    
+    margin: 2em 0 1em 0;   
     border: 1px solid grey;
-    color: grey;
+    color: rgb(255, 230, 0);
     text-transform: uppercase;
     padding: .5em 1.5em;
     letter-spacing: 2px;
     cursor: pointer;
     background-color: transparent;
-    margin-left: 430px;
+    width: 50%;
+    font-size: 25px;
+    transition: background-color 1s;
   }
+
 
   /* ESTILO DO FORMULÁRIO */
   
   .formularios-principal {
 
     background-color: black;
-    height: 800px;
+    height: 470px;
     font-family: sans-serif;
     display: block;
     padding-top: 150px;
@@ -556,5 +539,51 @@
 
     text-align: center;
     color: grey;
+  }
+  .gerenciar:hover{
+
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+    
+
+  }
+  
+  @media (max-width: 760px){
+
+  #img1 {    
+    width: 55%;
+    height: 55%;     
+    display: inline-block;
+
+  }
+  
+  #img2 {
+    width: 55%;
+    height: 55%;  
+    display: inline-block;
+
+  }
+
+  #img3 {
+    width: 55%;
+    height: 55%;  
+    display: inline-block;
+    
+  }
+
+  #img4 {
+    width: 55%;
+    height: 55%;  
+    display: inline-block;
+    
+  }
+
+  .gerenciar {
+    font-size: 20px;
+    width: 100%;
+   
+  }
+
+
 
   }

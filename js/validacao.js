@@ -18,44 +18,25 @@ let erros = document.querySelectorAll(".mensagens-erros")
 let verificar = document.querySelectorAll(".verificar")
 
 
-btnCadastrar.addEventListener("click",function(e){
- e.preventDefault()
-                 
-    validaNome(nome)
-    validaEmail(email)
-    validaSenha(senha)
-    validaConfirmacao(senha, confirmacaoSenha)
-    validaRg(rg)
-    validaData(data)
-    validaCep(cep)
-    validaRua(rua)
-    validaNumero(numero)
-    validaComplemento(complemento)
-    validaBairro(bairro)
-    validaCidade(cidade)
-    validaUf(uf)
-});
-
 
 function validaNome (nome){
     
    let nomeCompleto = nome.value.split(" ")
-    console.log(nomeCompleto);
-    if(nomeCompleto.length < 2){
-        $(".mensagens-erros")[0]
+        if(nomeCompleto.length < 2){
         erros[0].classList.remove("mensagens-erros")
         verificar[0].classList.add("verificar")
         
+        return false
     }else{
         erros[0].classList.add("mensagens-erros")
         verificar[0].classList.remove("verificar")
-        
-        
+  
+      return true
     }
     
 
-
 }
+
 
 function validaEmail(email){
 
@@ -64,11 +45,14 @@ function validaEmail(email){
         erros[1].classList.remove("mensagens-erros")
         verificar[1].classList.add("verificar")
         
+        return false
 
     }else{
      
         erros[1].classList.add("mensagens-erros")
         verificar[1].classList.remove("verificar")
+
+        return true
         
         
     }
@@ -81,17 +65,17 @@ function validaSenha(senha) {
         erros[2].classList.remove("mensagens-erros")
         verificar[2].classList.add("verificar")
     
-        
+        return false
     }else if(senha.value == "" ){
         
         erros[2].classList.remove("mensagens-erros")
         verificar[2].classList.add("verificar")
-    
+        return false
         
     } else {
         erros[2].classList.add("mensagens-erros")
         verificar[2].classList.remove("verificar")
-    
+        return true
     }
 
 }
@@ -101,16 +85,24 @@ function validaConfirmacao(senha, confirmacaoSenha) {
     if(senha.value != confirmacaoSenha.value ){
         erros[3].classList.remove("mensagens-erros")
         verificar[3].classList.add("verificar")
+        return false
         
     }else if(confirmacaoSenha.value == "" ){
 
         erros[3].classList.remove("mensagens-erros")
         verificar[3].classList.add("verificar")
+        return false
+        
+    }else if(confirmacaoSenha.value.length < 6 ){
+
+        erros[3].classList.remove("mensagens-erros")
+        verificar[3].classList.add("verificar")
+        return false
         
     }else  {
         verificar[3].classList.remove("verificar")
         erros[3].classList.add("mensagens-erros")
-
+        return true
     }
     
 }
@@ -120,27 +112,30 @@ function validaRg(rg) {
         verificar[4].classList.remove("verificar")
         erros[4].classList.add("mensagens-erros")
         
+        return true
 
     }else{
 
         erros[4].classList.remove("mensagens-erros")
         verificar[4].classList.add("verificar")
         
+        return false
     }
 }
 
 function validaData(data) {
-    const dataAtual = new Date();
-    const dataDeNascimento = data.value
-    let idade = dataAtual - dataDeNascimento
-    if(idade >= 18){
+  
+    if(data.value.length != 0){
         verificar[5].classList.remove("verificar")
         erros[5].classList.add("mensagens-erros")
+
+        return true
 
     }else{
 
         erros[5].classList.remove("mensagens-erros")
         verificar[5].classList.add("verificar")
+        return false
     }
     
 }
@@ -149,12 +144,14 @@ function validaCep(cep) {
     if (cep.value.length == 8 ){
         verificar[6].classList.remove("verificar")
         erros[6].classList.add("mensagens-erros")
+        return true
       
     }else{
 
         erros[6].classList.remove("mensagens-erros")
         verificar[6].classList.add("verificar")
-        
+
+        return false
     }
 }
 function validaRua(rua) {
@@ -211,3 +208,103 @@ function validaUf(uf) {
 
     }
 }
+
+nome.addEventListener("blur", ()=>{
+     validaNome(nome)
+
+})
+
+email.addEventListener("blur", ()=>{
+    validaEmail(email)
+
+})
+
+senha.addEventListener("blur", ()=>{
+    validaSenha(senha)
+    
+})
+
+confirmacaoSenha.addEventListener("blur", ()=>{
+    validaConfirmacao(senha, confirmacaoSenha)
+
+})
+
+rg.addEventListener("blur", ()=>{
+    validaRg(rg)
+
+})
+
+data.addEventListener("blur", ()=>{
+    validaData(data)
+    
+})
+
+cep.addEventListener("blur", ()=>{
+    validaCep(cep)
+
+})
+
+numero.addEventListener("blur", ()=>{
+    validaNumero(numero)
+
+})
+
+complemento.addEventListener("blur", ()=>{
+    validaComplemento(complemento)
+
+})
+
+btnCadastrar.addEventListener("click",function(e){
+    e.preventDefault()
+
+    validacao = [
+    validaNome(nome),
+    validaEmail(email),
+    validaSenha(senha),
+    validaConfirmacao(senha, confirmacaoSenha),
+    validaRg(rg),validaData(data),
+    validaCep(cep)]
+    
+    validaNome(nome)
+    validaEmail(email)
+    validaSenha(senha)
+    validaConfirmacao(senha, confirmacaoSenha)
+    validaRg(rg)
+    validaData(data)
+    validaCep(cep)
+    validaRua(rua)
+    validaNumero(numero)
+    validaComplemento(complemento)
+    validaBairro(bairro)
+    validaCidade(cidade)
+    validaUf(uf)
+
+    for(let i = 0 ;i < validacao.length ; i ++){
+
+        if (validacao[i] == true){
+            console.log("Certo");
+           
+            
+        }else{
+    
+            console.log("erro");
+        }
+
+    }
+    
+});
+console.log(btnCadastrar.value)
+
+// validaNome(nome)
+// validaEmail(email)
+// validaSenha(senha)
+// validaConfirmacao(senha, confirmacaoSenha)
+// validaRg(rg)
+// validaData(data)
+// validaCep(cep)
+// validaRua(rua)
+// validaNumero(numero)
+// validaComplemento(complemento)
+// validaBairro(bairro)
+// validaCidade(cidade)
+// validaUf(uf)
