@@ -5,7 +5,7 @@
   }
   
   body {
-    font-family: sans-serif;
+    font-family: 'Bebas Neue', cursive;    
     color: white;
     padding-right: 0px;
   }
@@ -18,7 +18,9 @@
   h1 {
 
     color: white;
+    letter-spacing: 1px;
   }
+
   .container {
     max-width: 1130px;
     margin: 0 auto;
@@ -42,22 +44,23 @@
   .header a {
     font-weight: bold;
     background: #ffff00;
-    color: rgb(0, 0, 0);
+
+    color: #2c2c2c;
     align-self: flex-start;
     padding: 8px 18px;
     text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 1s;
-  }
-
-
-  .header a:hover{
-    background: #000000;
-    color: #ffffff;
-    border: solid 2px #ffff00;
+    border-radius: 5px;
+    font-weight: bold;
 
   }
   
+  .header a:hover {
+   
+    background: #2c2c2c;
+    color: white;
+    transition: 0.5s;
+  
+  }
   
   .main {
     padding-top: 4rem;
@@ -104,9 +107,11 @@
     background: #ffff00;
     outline: none;
     border: none;
-    color: white;
+    color: #2c2c2c;
     font-size: 30px;
     cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
   }
   
   .form-cta button::after {
@@ -119,7 +124,9 @@
   }
   
   .form-cta button:hover {
-    background: #f40612;
+    background: #2c2c2c;
+    color: white;
+    transition: 0.5s;
   }
   
   .main p {
@@ -414,8 +421,8 @@
   }
 
   h3 {
-    font-family: 'Bebas Neue', cursive; 
-    color: yellow;
+    font-family: sans-serif;
+    color: white;
     text-align: center;
     text-transform: none;
     font-size: 30px;
@@ -460,7 +467,6 @@
 
   .gerenciar {
     text-align: center;
-    font-family: 'Bebas Neue', cursive;  
     display: block;    
     margin: 2em 0 1em 0;   
     border: 1px solid grey;
