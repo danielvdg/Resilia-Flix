@@ -339,10 +339,10 @@ $(document).delegate('.infoBotao','click', function(){
 
 function logar(){
     
-    $('#pgQEA').hide()
+    
 
     setTimeout(function () {
-    
+    $('#pgQEA').hide()    
     $('.logado').fadeIn()    
     
     paginador.hide()
