@@ -283,7 +283,7 @@ btnCadastrar.addEventListener("click",function(e){
 
     console.log(deuCerto)
 
-    }
+    
     
 });
 console.log(btnCadastrar.value)
