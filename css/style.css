@@ -5,7 +5,7 @@
   }
   
   body {
-    font-family: sans-serif;
+    font-family: 'Bebas Neue', cursive;    
     color: white;
     
   }
@@ -467,7 +467,6 @@
 
   .gerenciar {
     text-align: center;
-    font-family: 'Bebas Neue', cursive;  
     display: block;    
     margin: 2em 0 1em 0;   
     border: 1px solid grey;
