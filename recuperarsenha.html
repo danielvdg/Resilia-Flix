@@ -50,10 +50,10 @@
                 <h3 class="mb-3">Recuperar senha</h3>
                 <form>
                     <div class="inputTopo">
-                        <input type="text" placeholder="Digite seu e-mail ou telefone">
+                        <input type="email" id="email" placeholder="Digite seu e-mail ">
                     </div>                  
                     <div class="inputTopo botao">
-                        <button>Enviar e-mail</button>
+                        <button id="btnEnviar">Enviar e-mail</button>
                     </div >
                     <div class="suporte">
                         <div class="lembreDeMim">
@@ -63,9 +63,9 @@
                 </form>
             </div>
           </div>
-          <div id="mensagem-conteiner" class="loginBody">
+          <div  class="loginBody mensagem-conteiner-invisivel" >
             <div class="loginBox">
-                <p id="mensagem-sucesso">Uma mensagem foi enviada para o seu Email <span id="email-enviado"></span> , por favor verifique sua caixa de E-mail</p>
+                <p id="mensagem-sucesso"></p>
             </div>
           </div>
       </div>
@@ -128,6 +128,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/recuperarsenha.js"></script>
     <script src="js/src/Controllers/filme-controller.js"></script>
     <script src="js/src/Models/filme-model.js"></script>
     <script src="js/src/Views/filme-view.js"></script>
