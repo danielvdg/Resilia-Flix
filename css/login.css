@@ -185,3 +185,29 @@ right: 0;
     background-color: rgba(255, 255, 255, 0);
 
   }
+
+  .modalSair{
+    background-color: rgb(0, 0, 0);
+    border: solid 2px rgb(0, 0, 0);
+  }
+
+  .modal-title{
+      color: yellow;
+  }
+
+   .botaoDrop{
+    background-color:rgba(255, 255, 255, 0) !important;
+
+  }
+
+  .dpColor{
+        background-color: rgba(0, 0, 0, 0.267);
+        color: yellow;
+        border: solid 2px rgba(255, 255, 0, 0.363);
+  }
+
+  .dpColor button{
+    
+    color: yellow;
+}
+

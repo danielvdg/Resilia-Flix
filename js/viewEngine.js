@@ -18,6 +18,10 @@ var loader = `
             <span class="sr-only">Loading...</span>
             </div> 
             `
+const amazenamentoLocal = localStorage;
+let _email = localStorage.email      
+let _pass = localStorage.senha
+let _isLoged = localStorage.logado
 
 //FUNÇÃO QUE IMPRIME OS FILMES NA DIV PRINCIPAL
 function impressoraDeFilmes(arr) {
@@ -423,3 +427,28 @@ function paginaQEA(){
     $('#pgQEA').fadeIn()    
 
 }
+
+function sair(){
+
+    setTimeout(function () {
+        $('.sair').hide()
+        $('.deslogado').fadeIn()
+        $('.logado').fadeOut()
+        $('#pgQEA').hide()
+        $('html, body').animate({scrollTop:0}, 'slow');
+        paginador.hide()
+        $("#logar").show()
+        $("#loaderLogin").hide()
+        }, 500) 
+
+
+
+}
+
+$("#logout").on('click', function(){
+    $("#ficar").click()
+    sair()
+    
+})
+
+

@@ -39,9 +39,20 @@
 
     <img src="img/sf.png" alt="Resiliaflix" draggable="false" />
 
-    <div class="link-flex"> <a href="#topo" class="deslogado" data-bs-toggle="modal"
-        data-bs-target="#formLogin">Login</a>
-      <a href="#topo" class="logadoSair sair">Sair</a>
+    <div class="link-flex"> <div class="btn-group">
+    <a href="#topo" class="logadoSair sair dropdown-toggle botaoDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i></a>
+     
+      <div class="dropdown-menu dropdown-menu-right dpColor">
+        <button class="dropdown-item" type="button">Configurações</button>
+        <button class="dropdown-item" type="button">Editar Perfil</button>
+        <button class="dropdown-item" data-toggle="modal" data-target="#modalSair" type="button">Sair</button>
+      </div>
+
+    </div>
+    
+    <a href="#topo" class="deslogado" data-bs-toggle="modal"
+        data-bs-target="#formLogin">Entrar  <i class="far fa-user"></i></a>
+      
 
     </div>
 
@@ -425,6 +436,25 @@
     </div>
   </div>
 
+  <div class="modal fade" id="modalSair" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modalSair modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Você tem certeza?</h5>
+          <button type="button" class="close d-none" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Escolha uma opção
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="ficar" class="btn btn-secondary" data-dismiss="modal">Permanecer</button>
+          <button type="button" id="logout" class="btn btn-primary">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
