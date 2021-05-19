@@ -43,9 +43,9 @@
   
   .header a {
     font-weight: bold;
-    background: #ffff00;
-
-    color: #2c2c2c;
+    background: #ffff0000;
+    
+    color: #ffff00;
     align-self: flex-start;
     padding: 8px 18px;
     text-decoration: none;
@@ -56,7 +56,7 @@
   
   .header a:hover {
    
-    background: #2c2c2c;
+    background: #ffffff00;
     color: white;
     transition: 0.5s;
   

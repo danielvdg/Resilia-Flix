@@ -281,7 +281,11 @@ btnCadastrar.addEventListener("click",function(e){
 
     const deuCerto = validacao.every((verdadeiro)=>verdadeiro)
 
-    console.log(deuCerto)
+    if(deuCerto){
+        _email = 'CAMPO DE MAIL'
+        _pass = 'CAMPO DE SENHA'
+
+    }
 
     
     
