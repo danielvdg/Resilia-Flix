@@ -5,7 +5,7 @@
   }
   
   body {
-    font-family: 'Bebas Neue', cursive;    
+    
     color: white;
     
   }
@@ -100,7 +100,7 @@
   .form-cta input {
     padding: 20px 10px;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: 'Bebas Neue', cursive;
   }
   
   .form-cta button {
@@ -415,14 +415,14 @@
     text-align: center;
     margin-top: 50px;
     color: white;
-    font-family: sans-serif;
+    font-family: 'Bebas Neue', cursive;
     text-transform: none;
     margin-bottom: 20px;
   }
 
   h3 {
-    font-family: sans-serif;
-    color: white;
+    
+    color:#f4d11e;
     text-align: center;
     text-transform: none;
     font-size: 30px;
