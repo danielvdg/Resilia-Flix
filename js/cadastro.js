@@ -24,10 +24,11 @@ function requisicao (numCep){
         
     })
     
-}    
+}   
 // try{
+ 
 //     if(resposta != 200){
-//         throw new Error("Cep Inválido")
+//     throw new Error("Cep Inválido")
      
 //     }else{
         
