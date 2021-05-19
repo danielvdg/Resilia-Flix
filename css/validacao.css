@@ -9,103 +9,47 @@
 
 }
 
-.cadastroTransp {   
+.cadastroTransp.deslogado {        
     
-    
-    margin-top: 130px; 
-    
+    padding: 15%;
+    z-index: 90;    
+    height: 100%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.932);   
+    box-sizing: border-box;    
+    width: 100%;    
 
     
   }
 
  .cadastroTransparente{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     background-color: rgba(255, 0, 0, 0);
-    padding: 25px;  
+    padding: 25px; 
+    border: 1px white; 
+    border-radius: 10px;
+    box-shadow: 5px -10px #f4d01e9c;
 
  }
 
-.inputNomeTxt{
-    display: flex;
-    width: 100%;
+.inputCadastro{
 
+    margin: 10px 0px;
+    border-radius: 3px;    
+    display: flex;
+    height: 50px;   
+    width: 100%;
+    color: #fff;
+    background: #333;
+    border: 1px solid #333;
+    padding: 5px;
+    box-sizing: border-box;
+    outline: none;
 }
 
-.inputEmailTxt{
-    display: flex;
-    width: 100%;
-
-}
-
-.inputSenhaTxt{
-    display: flex;
-    width: 100%;
-
-}
-
-.inputSenhaCTxt{
-    display: flex;
-    width: 100%;
-
-}
-
-.inputRgTxt{
-    display: flex;
-    width: 100%;
-
-}
-
-.inputData{
-    display: flex;
-    width: 100%;
-
-}
-
-.inputCEP{
-    display: flex;
-    width: 100%;
-
-}
-
-.inputRua{
-    display: flex;
-    width: 100%;
-
-}
-
-.inputNumero{
-    display: flex;
-    width: 100%;
-
-}
-
-.InputComple{
-    display: flex;
-    width: 100%;
-    
-
-}
-
-.inputBairro{
-    display: flex;
-    width: 100%;
-
-}
-
-.inputCidade{
-    display: flex;
-    width: 100%;
-
-}
-
-.inputEstado{
-    display: flex;
-    width: 100%;
-
-}
 
 .txtLabel{
     width: 16%;
@@ -115,10 +59,10 @@
 }
 
 .txtInput{
-    width: 70%;
+    width: 100%;
     
+}  
 
-}
 
 .confirmaSenha{
     display: flex;
@@ -128,10 +72,11 @@
 
 
 
-  #form-conteiner{
+#form-conteiner{
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 5%;
     
   }  
 
@@ -143,26 +88,47 @@ label{
 
   #btnCadastrar{
     margin: 0 auto;
+    width: 100%;
+    background-color: #f4d11e ;
+    height: 50px;       
+    color: #2c2c2c;
+    font-weight: bold;
+    border: 1px solid #2c2c2c;
+    border-radius: 4px;
   }
 
-  @media (max-width: 760px){
+  @media (max-width: 600px){
 
     label{
         color: rgb(255, 255, 255);
         display: flex;
-        font-size: 10px;
-       
+        font-size: 10px;       
         white-space: nowrap;
      }  
 
      .txtLabel{
-        width: 35%;
+        width: 50%;
         display: flex;
-        justify-content: flex-end;
-    
+        justify-content: flex-end;    
     }
-   
-   
+
+    #form-conteiner{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .cadastroTransp.deslogado {        
+    
+        padding:1%;
+        width: 100%;  
+        display: flex;  
+        flex-direction: column;
+        justify-content;
+    
+        
+      }
 
 
   }
