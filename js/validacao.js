@@ -281,7 +281,8 @@ btnCadastrar.addEventListener("click",function(e){
 
     const deuCerto = validacao.every((verdadeiro)=>verdadeiro)
 
-    if(deuCerto){
+
+      if(deuCerto){
         _email = 'CAMPO DE MAIL'
         _pass = 'CAMPO DE SENHA'
 
@@ -291,17 +292,3 @@ btnCadastrar.addEventListener("click",function(e){
     
 });
 console.log(btnCadastrar.value)
-
-// validaNome(nome)
-// validaEmail(email)
-// validaSenha(senha)
-// validaConfirmacao(senha, confirmacaoSenha)
-// validaRg(rg)
-// validaData(data)
-// validaCep(cep)
-// validaRua(rua)
-// validaNumero(numero)
-// validaComplemento(complemento)
-// validaBairro(bairro)
-// validaCidade(cidade)
-// validaUf(uf)
