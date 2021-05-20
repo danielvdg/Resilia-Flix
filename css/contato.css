@@ -15,7 +15,12 @@
   margin-top: 130px;
   padding: 20px 0px;
   font-family: 'Bebas Neue', cursive;
+  height: 700px;
 
+}
+
+.contatoSec{
+  display: none;
 }
 
 .container {

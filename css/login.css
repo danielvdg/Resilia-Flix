@@ -52,7 +52,20 @@ right: 0;
     background: rgba(0, 0, 0, 0.932);
     border-radius: 10px;
     box-sizing: border-box;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    width: 100%;
+}
+
+.loginBodySenha {
+
+    padding: 50px;
+    z-index: 90;    
+    height: 500px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.932);
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.13);
     width: 100%;
 }
 

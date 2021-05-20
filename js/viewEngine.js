@@ -18,132 +18,128 @@ var loader = `
             <span class="sr-only">Loading...</span>
             </div> 
             `
-const amazenamentoLocal = localStorage;
-let _email = localStorage.email      
-let _pass = localStorage.senha
-let _isLoged = localStorage.logado
 
 //FUNÇÃO QUE IMPRIME OS FILMES NA DIV PRINCIPAL
 function impressoraDeFilmes(arr) {
 
     quadro.html(`${loader}`)
-    
-    arr.forEach(element => {         
 
-            var botoes = `
+    arr.forEach(element => {
+
+        var botoes = `
                 <button type="button" id="playFilme" class="btn btn-outline-dark btn-sm"> <i class="fas fa-play-circle"></i></button>
                 <button type="button" id="${element.imdbID}" class="btn btn-outline-dark btn-sm infoBotao" data-bs-toggle="modal" data-bs-target="#filmeInfos"> <i class="fas fa-info-circle"></i></button>  
                         `
 
-            let divBotao = $('<div />', {class: 'divBotao'}) 
+        let divBotao = $('<div />', { class: 'divBotao' })
 
-            divBotao.append(botoes)        
-            
-            let img = $('<img />', { id: 'filmebusca', class: 'img-fluid'})
+        divBotao.append(botoes)
 
-            element.Poster == "N/A" ? img.attr('src', 'img/poster.jpg') : img.attr('src', `${element.Poster}`)
+        let img = $('<img />', { id: 'filmebusca', class: 'img-fluid' })
 
-            let div = $('<div />', {class: 'cardCustom'})          
-    
-            div.hide()
+        element.Poster == "N/A" ? img.attr('src', 'img/poster.jpg') : img.attr('src', `${element.Poster}`)
 
-            div.append(img)                      
+        let div = $('<div />', { class: 'cardCustom' })
 
-            div.append(divBotao)
+        div.hide()
 
-            quadro.append(div)   
+        div.append(img)
 
-            div.fadeIn("slow")               
+        div.append(divBotao)
+
+        quadro.append(div)
+
+        div.fadeIn("slow")
 
     });
 
     $('#loader').hide()
-   // }
+    // }
 }
 
 //BUSCADOR DE FILME
 buscarFilme.on('click', function (e) {
 
-    if(inputNomeBusca == true){
+    if (inputNomeBusca == true) {
         nomeBusca.fadeIn()
         inputNomeBusca = false
-    }else{
+    } else {
         nomeBusca.fadeOut()
         inputNomeBusca = true
     }
-    
+
 
 })
 
-nomeBusca.on('keyup', function (){
+nomeBusca.on('keyup', function () {
 
-    if(nomeBusca.val().length >= 3){
-        let nomeFilme = nomeBusca.val()        
-    
-            $.ajax({
-    
-                url: `http://www.omdbapi.com/?s=${nomeFilme}&type=movie&apikey=fbde633c`,
-                success: filme => {
-    
-                    filmes = filme.Search
-    
-                    console.log(filme)
-    
-                    if (typeof filmes == 'undefined') {
-    
-                        $('.resultados').text("")
-    
-                        quadro.html('<span class="error">Ooops... Filme não encontrado</span>')
-                        paginador.hide()
-    
-                    } else {
-    
-                        let totalResults = parseInt(filme.totalResults)
-    
-                        setTimeout(function () {
-    
-                            $('#loader').hide()
-    
-                            impressoraDeFilmes(filmes)
-    
-                            $('.resultados').text(`${totalResults} ${totalResults > 1 ? "resultados" : "resultado"}`)
-    
-                            if (totalResults > 10) {
-    
-                                paginador.show()
-                                numPagina.val('1')
-                                retornaPaginaFilme.hide()
-                                console.log()
-        
-                            } else {
-                                paginador.hide()
-        
-                            }
-    
-                        }, 500)
-    
-                        
-                    }
+    if (nomeBusca.val().length >= 3) {
+        let nomeFilme = nomeBusca.val()
+
+        $.ajax({
+
+            url: `http://www.omdbapi.com/?s=${nomeFilme}&type=movie&apikey=fbde633c`,
+            success: filme => {
+
+                filmes = filme.Search
+
+                console.log(filme)
+
+                if (typeof filmes == 'undefined') {
+
+                    $('.resultados').text("")
+
+                    quadro.html('<span class="error">Ooops... Filme não encontrado</span>')
+                    paginador.hide()
+
+                } else {
+
+                    let totalResults = parseInt(filme.totalResults)
+
+                    setTimeout(function () {
+
+                        $('#loader').hide()
+
+                        impressoraDeFilmes(filmes)
+
+                        $('.resultados').text(`${totalResults} ${totalResults > 1 ? "resultados" : "resultado"}`)
+
+                        if (totalResults > 10) {
+
+                            paginador.show()
+                            numPagina.val('1')
+                            retornaPaginaFilme.hide()
+                            console.log()
+
+                        } else {
+                            paginador.hide()
+
+                        }
+
+                    }, 500)
+
+
                 }
-            })
-        
+            }
+        })
+
 
     }
-    else{
+    else {
         if (nomeBusca.val() == "") {
-    
+
             logar()
             $('.resultados').text("Melhores filmes")
-    
+
         }
     }
 
-  
+
 })
 
 
 //PAGINADOR PARA RETORNO DA PÁGINA
-retornaPaginaFilme.on('click', function () {    
+retornaPaginaFilme.on('click', function () {
 
     let nomeFilme = nomeBusca.val()
 
@@ -194,7 +190,7 @@ retornaPaginaFilme.on('click', function () {
 })
 
 //PAGINADOR PARA AVANÇO DA PÁGINA
-avancaPaginaFilme.on('click', function () {    
+avancaPaginaFilme.on('click', function () {
 
     let nomeFilme = nomeBusca.val()
 
@@ -284,7 +280,7 @@ numPagina.on('blur', function () {
 
 
 //VIEW FILME - PAGINA PRINCIPAL DE FILMES
-linkFilme.on('click', function(){
+linkFilme.on('click', function () {
 
     paginador.hide()
 
@@ -293,162 +289,291 @@ linkFilme.on('click', function(){
     setTimeout(function () {
 
         let filmesPrincipais = ["tt0371746", "tt0458339", "tt2015381", "tt2395427", "tt0478970", "tt1843866", "tt2250912", "tt1825683", "tt4154756", "tt5095030", "tt4154664", "tt4154796"]
-    
-    
-        for(let i = 0; i < filmesPrincipais.length; i++){            
-    
+
+
+        for (let i = 0; i < filmesPrincipais.length; i++) {
+
             $.ajax({
-    
+
                 url: `http://www.omdbapi.com/?i=${filmesPrincipais[i]}&apikey=fbde633c`,
                 success: filme => {
-                    
+
                     let arrFilmes = []
-                    arrFilmes.push(filme)    
-                    $('#loader').hide()        
+                    arrFilmes.push(filme)
+                    $('#loader').hide()
                     impressoraDeFilmes(arrFilmes)
-        
+
                 }
-            })             
+            })
         }
-    
-        $('#loader').hide()  
-    
-    }, 300) 
+
+        $('#loader').hide()
+
+    }, 300)
 
 })
 
 //Informações do Filme, parte em MVC
 
-$(document).delegate('.infoBotao','click', function(){
+$(document).delegate('.infoBotao', 'click', function () {
 
-   $.ajax({
-    
-    url: `http://www.omdbapi.com/?i=${this.id}&apikey=fbde633c`,
-    success: filme => {
-        
-        const filmeModel = new FilmeModel(filme.Title, filme.Actors, filme.Director, filme.Year, filme.imdbRating, filme.Runtime, filme.Released, filme.Plot, filme.Poster)  
+    $.ajax({
 
-        const filmeController = new FilmeController()
+        url: `http://www.omdbapi.com/?i=${this.id}&apikey=fbde633c`,
+        success: filme => {
 
-        const filmeView = new FilmeView()
+            const filmeModel = new FilmeModel(filme.Title, filme.Actors, filme.Director, filme.Year, filme.imdbRating, filme.Runtime, filme.Released, filme.Plot, filme.Poster)
 
-        filmeController.addFilme(filmeModel)
+            const filmeController = new FilmeController()
 
-        filmeView.mostraFilme(filmeModel)              
+            const filmeView = new FilmeView()
 
-    }
-})          
+            filmeController.addFilme(filmeModel)
+
+            filmeView.mostraFilme(filmeModel)
+
+        }
+    })
 
 })
 
-function logar(){
-    
+function logar() {
+
     
 
     setTimeout(function () {
-    $('#pgQEA').hide()    
-    $('.logado').fadeIn()    
-    
-    paginador.hide()
+        $("#bemVindo").fadeIn()
+        $('#pgQEA').hide()
+        $('.logado').fadeIn()
 
-    }, 500)     
+        paginador.hide()
+
+    }, 500)
 
     setTimeout(function () {
 
         let filmesPrincipais = ["tt0371746", "tt0458339", "tt2015381", "tt2395427", "tt0478970", "tt1843866", "tt2250912", "tt1825683", "tt4154756", "tt5095030", "tt4154664", "tt4154796"]
-    
+
         let arrFilmes = []
-        
-        for(let i = 0; i < filmesPrincipais.length; i++){            
-    
+
+        for (let i = 0; i < filmesPrincipais.length; i++) {
+
             $.ajax({
-    
+
                 url: `http://www.omdbapi.com/?i=${filmesPrincipais[i]}&apikey=fbde633c`,
                 success: filme => {
-                    
-                    arrFilmes.push(filme)    
-                    $('#loader').hide()        
+
+                    arrFilmes.push(filme)
+                    $('#loader').hide()
                     impressoraDeFilmes(arrFilmes)
-        
+
                 }
-            })          
+            })
         }
-    
-        $('#loader').hide()  
-    
-    }, 700) 
-    
+
+        $('#loader').hide()
+
+    }, 700)
+
 }
 
-function deslogar(){    
+function deslogar() {
 
     setTimeout(function () {
+        $('#bemVindo').hide()
         $('.sair').hide()
         $('.deslogado').fadeIn()
         $('.logado').fadeOut()
         $('#pgQEA').hide()
-        $('html, body').animate({scrollTop:0}, 'slow');
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
         paginador.hide()
         $("#logar").show()
         $("#loaderLogin").hide()
-        }, 500) 
+    }, 500)
 
 }
 
 $('form').submit(false)
 
-$(document).delegate('#logar', 'click', function(e){
+$(document).delegate('#logar', 'click', function (e) {
 
     e.preventDefault();
 
     let login = $('#txtLogin').val()
     let senha = $('#txtSenha').val()
 
-   if(senha == "admin" && login == "admin"){
+    if ((senha == "admin" && login == "admin") || (senha == localStorage.senha && login == localStorage.email)) {
+
+        $('.msgErroCadastro').hide()
+
+        $(".badge").hide()
+
+        $('.msgErroCadastro2').hide()
+
+        $('.cadastroTransp').hide()
 
         $("#logar").hide()
 
         $("#loaderLogin").fadeIn()
 
-        setTimeout(function(){
-            
-            paginaQEA()            
+        setTimeout(function () {
 
-        }, 1000)      
-   }
+            paginaQEA()
+
+        }, 1000)
+    }else{
+        $(".badge").fadeIn()
+
+        setTimeout(function(){
+            $(".badge").fadeOut() 
+
+        }, 5000)
+    }
 
 })
 
-function paginaQEA(){
+function paginaQEA() {
 
     $(".deslogado").hide()
     $(".fechaModal").click()
     $(".logadoSair").fadeIn()
-    $('#pgQEA').fadeIn()    
+    $('#pgQEA').fadeIn()
 
 }
 
-function sair(){
+function sair() {
 
     setTimeout(function () {
         $('.sair').hide()
         $('.deslogado').fadeIn()
         $('.logado').fadeOut()
         $('#pgQEA').hide()
-        $('html, body').animate({scrollTop:0}, 'slow');
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
         paginador.hide()
         $("#logar").show()
         $("#loaderLogin").hide()
-        }, 500) 
-
-
+    }, 500)
 
 }
 
-$("#logout").on('click', function(){
+$("#logout").on('click', function () {
     $("#ficar").click()
     sair()
+    deslogar()
+
+})
+
+function paginaCadastro() {
+
+    setTimeout(function () {
+        $(".deslogado").hide()
+        $(".cadastroTransp").fadeIn()
+    })
+
+}
+
+$("#btnHomeCadastro").on('click', function () {
+
+    let emailHome = $("#emailHome").val()
+
+
+    if (validateEmail(emailHome)) {
+
+        if (emailHome == localStorage.email) {
+            $('.msgErroCadastro2').show()
+            $('.msgErroCadastro').hide()
+        }
+        else {
+            $('.msgErroCadastro').hide()
+            $('.msgErroCadastro2').hide()
+            paginaCadastro()
+        }
+
+
+    }
+    else {
+        $('.msgErroCadastro2').hide()
+        $('.msgErroCadastro').show()
+    }
+
+})
+
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+$(document).delegate('#voltarHome', 'click', function () {
+    $('.contatoSec').hide()
+    $('.recSenha').hide()
+    $('.cadastroTransp').hide()
+    $('.deslogado').fadeIn()
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+
+})
+
+$("#btnRecSenha").on('click', function () {
+
+    let emailRec = $("#recSenhatxt").val()
+
+    if(validateEmail(emailRec)){
+
+        if(emailRec == localStorage.email){
+            $(".recuperasenha").fadeIn()
+            setTimeout(function(){
+                $(".recuperasenha").fadeOut()
+
+            }, 5000)
+        }
+        else{
+            $(".naocadastrado").fadeIn()
+            setTimeout(function(){
+                $(".naocadastrado").fadeOut()
+
+            }, 5000)
+        }       
+
+    }
+
+})
+
+function paginaRecSenha(){
+
+$('.deslogado').hide()
+$('.recSenha').fadeIn()
+
+}
+
+function paginaContato(){
+    $('.deslogado').hide()
+    $('.contatoSec').fadeIn()
+}
+
+$(document).delegate('#esqueciAsenha', 'click', function(){
+
+    $(".fechaModal").click()   
+    paginaRecSenha()
     
 })
+
+$(document).delegate('#Cadastrese', 'click', function(){
+    $(".fechaModal").click() 
+ paginaCadastro()
+
+})
+
+$(document).delegate('.faleconosco', 'click', function(){
+    paginaContato()
+
+})
+
+$(document).delegate('.imgCresce', 'click', function(){
+    let nome = this.id
+    
+    $('#bemVindo').html(`Seja bem vindo(a), ${nome}`)
+    logar()
+
+})
+
 
 

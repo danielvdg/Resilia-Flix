@@ -432,38 +432,54 @@
   div img {
 
     border-radius: 4px;
+    
   }
 
-  #img1 {    
+  .imgCresce div img{
+    transform: width 0.8s;
+
+  }
+
+  .imgCresce div img:hover{
+    width: max-content;
+  }
+
+
+
+  #Antonio {    
     width: 20%;
-    height: 20%;
-    
-    
+    height: 20%;    
     display: inline-block;
+    cursor: pointer;
 
   }
   
-  #img2 {
+  #Daniel {
     width: 20%;
     height: 20%;
     display: inline-block;
+    cursor: pointer;
 
   }
 
-  #img3 {
+  #Kellen {
     width: 20%;
     height: 20%;
     display: inline-block;
+    cursor: pointer;
     
   }
 
-  #img4 {
+  #Nathalia {
 
     width: 20%;
     height: 20%;
     display: inline-block;
+    cursor: pointer;
     
   }
+
+  
 
   .gerenciar {
     text-align: center;
@@ -519,7 +535,16 @@ width: 100%;
     border: 1px solid grey;
   }
 
- 
+  #btnCadastrar {
+    background-color: #f4d11e ;
+    height: 50px;
+    width: 170px;
+    margin: auto 0;
+    color: #2c2c2c;
+    font-weight: bold;
+    border: 1px solid #2c2c2c;
+    border-radius: 4px;
+  }
 
   .termos {
 
@@ -534,38 +559,86 @@ width: 100%;
 
   }
 
- 
-      
+  .msgErroCadastro {
+    display: none;
+    color: yellow;
+    text-transform: uppercase;
+    font-size: 12px !important;
 
+  }
+
+  .msgErroCadastro2 {
+    display: none;
+    color: yellow;
+    text-transform: uppercase;
+    font-size: 12px !important;
+
+  }
+      
+#esqueciAsenha{
+  color: #ffff00;
+  text-decoration: none;
+}
+
+.badge{
+  display: none;
+}
+
+.faleconosco{
+  width: 150px;
+  height: 50px;
+  background-color: #ffff00;
+  transition: background-color 0.5s;
+  font-weight: bold;
+}
+
+.faleconosco:hover{
+    background-color: #000000;
+    color: #ffff00;
+}
+
+#bemVindo{
+  display:none;
+  color: #ffff00;
+  font-size: 15px;
+}
+
+.link-flex{
+  display: flex;
+  align-items: center;
+  
+
+}
   
   @media (max-width: 760px){
 
-  #img1 {    
+  #Antonio {    
     width: 55%;
     height: 55%;     
     display: inline-block;
+    cursor: pointer;
 
   }
   
-  #img2 {
+  #Daniel {
     width: 55%;
     height: 55%;  
     display: inline-block;
-
+    cursor: pointer;
   }
 
-  #img3 {
+  #Kellen {
     width: 55%;
     height: 55%;  
     display: inline-block;
-    
+    cursor: pointer;
   }
 
-  #img4 {
+  #Nathalia {
     width: 55%;
     height: 55%;  
     display: inline-block;
-    
+    cursor: pointer;
   }
 
   .gerenciar {
@@ -577,6 +650,14 @@ width: 100%;
   legend{
     font-size: 20px;
     text-align: center;
+}
+
+#esqueciAsenha{
+  font-size: 10px;
+}
+
+#bemVindo{
+  font-size: 9px;
 }
 
   }

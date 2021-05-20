@@ -21,7 +21,10 @@
 
   <link rel="stylesheet" href="css/bootstrap.css">
 
+  <link rel="stylesheet" href="css/contato.css"> 
+
   <link rel="stylesheet" href="css/validacao.css">
+
 
   <link rel="stylesheet" href="css/login.css">
 
@@ -39,7 +42,7 @@
 
     <img src="img/sf.png" alt="Resiliaflix" draggable="false" />
 
-    <div class="link-flex"> <div class="btn-group">
+    <div class="link-flex"> <span id="bemVindo">Seja bem vindo, user</span><div class="btn-group">
     <a href="#topo" class="logadoSair sair dropdown-toggle botaoDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i></a>
      
       <div class="dropdown-menu dropdown-menu-right dpColor">
@@ -66,17 +69,64 @@
         Pronto para assistir? Informe seu email para criar ou reiniciar sua
         assinatura.
       </p>
-      <form class="form-cta">
-        <input type="text" placeholder="Email" />
-        <button>Vamos lá</button>
+      
+      <form class="form-cta"><input type="text" id="emailHome"placeholder="Email" />
+        
+        <button id="btnHomeCadastro">Vamos lá</button>
+        
+        <span class="msgErroCadastro">Verifique Seu E-mail por favor</span>
+        <span class="msgErroCadastro2">Este email já está cadastro</span>
+        
       </form>
+      <div class="alert casdastrorealizado alert-dismissible alert-success">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Parabéns!</strong> O seu cadastro foi realizado com sucesso
+      </div>
     </div>
+   
     <div class="gradient"></div>
+     
   </main>
+  <section class="recSenha">
+    <div class="recupera">
+      <div class="loginBody">
+        <div class="loginBox">
+            <h3 class="mb-3">Recuperar senha</h3>
+            <form class="formRecSenha">
+                <div class="inputTopo">
+                    <input type="email" id="recSenhatxt" placeholder="Digite seu e-mail ">
+                </div>                  
+                <div class="inputTopo botao">
+                    <button id="btnRecSenha">Enviar e-mail</button>
+                </div >
+                <div class="suporte">
+                    <div class="lembreDeMim">
+                      Não lembro meu e-mail e telefone  
+                    </div>                                       
+                </div>                 
+            </form>
+        </div>
+      </div>
+      
+  </div>
 
-  <section class="cadastroTransp deslogado">
+  <div class="alert recuperasenha w-50 mx-auto my-3 alert-dismissible alert-success">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <strong>As informações para recuperação de senha foram enviadas para o seu e-mail</strong> 
+  </div>
 
-    <h2>Cadastre-se</h2>
+  <div class="alert naocadastrado w-50 mx-auto my-3 alert-dismissible alert-danger">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <strong>Email não cadastrado</strong>
+  </div>
+  
+  <button id="voltarHome" class="mx-auto my-3">Voltar</button> 
+
+  </section>
+
+  <section class="cadastroTransp">
+
+    <h2 class="cadastroSec">Cadastre-se</h2>
 
     <div class="cadastroTransparente shadow-lg">
 
@@ -86,7 +136,7 @@
             <legend>Informações Básicas</legend>  
 
             <div class="inputNomeTxt"> 
-            <div class="txtInput"><input placeholder="Nome Completo" name="nome" type="text" id="nome" class="inputCadastro form-control" required/><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div></div>        
+            <div class="txtInput"><input placeholder="Nome Completo"  type="text" id="nome" class="inputCadastro form-control" required/><span class="mensagens-erros">❌</span><span class="verificar">✔️</span></div></div>        
             
             
             <div class="inputEmailTxt"> 
@@ -154,14 +204,15 @@
     
                     
         
-        <button id="btnCadastrar">Cadastrar-se</button> 
-        <p style="text-align: center;">*Campos Obrigatórios</p> 
+        
         
       </fieldset>
-  
+      <button id="btnCadastrar">Enviar</button> 
+        <p style="text-align: center;">*Campos Obrigatórios</p> 
+      
     </form>  
 
-    </d iv>
+    <button id="voltarHome">Voltar</button> 
 
   </section>
 
@@ -233,22 +284,22 @@
       </div>
 
       <div class="imgQEA">
-        <div id="img1" class="mx-1">
+        <div id="Antonio" class="mx-1 imgCresce">
           <img src="../Resilia-Flix/img/antonio.png" alt="antonioprofile">
           <h3>Antônio</h3>
         </div>
 
-        <div id="img2" class="mx-1">
+        <div id="Daniel" class="mx-1 imgCresce">
           <img src="../Resilia-Flix/img/daniel.png" alt="antonioprofile">
           <h3>Daniel</h3>
         </div>
 
-        <div id="img3" class="mx-1">
+        <div id="Kellen" class="mx-1 imgCresce">
           <img src="../Resilia-Flix/img/kellen.png" alt="antonioprofile">
           <h3>Kellen</h3>
         </div>
 
-        <div id="img4" class="mx-1">
+        <div id="Nathalia" class="mx-1 imgCresce">
           <img src="../Resilia-Flix/img/nathalia.png" alt="antonioprofile">
           <h3>Nathalia</h3>
         </div>
@@ -330,6 +381,82 @@
     </div>
   </section>
 
+  <section class="centro contatoSec">
+
+    <h3>Entre em contato conosco</h3>
+
+     <div class="container">
+       <div class="box">
+         <div class="imgBox">
+           <img src="../Resilia-Flix/img/avatara.jpg">
+         </div>
+       <div class="conteudo">
+         <div>
+           <h2>Antônio - SP</h2>
+           <ul>
+           <li><a href="https://github.com/mumbx"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/GITHUB_icon-icons.com_65553.png" width="50%" height="50%"></p></a></li>
+           <li><a href="https://www.linkedin.com/in/antonioknx/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/LINKEDIN_icon-icons.com_65538.png" width="50%" height="50%"></p></a></li>
+           <li><a href="https://www.linkedin.com/in/antonioknx/detail/contact-info/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/whatsapp_icon-icons.com_65542.png" width="50%" height="50%"></p></a></li>
+           <li><a href="https://www.linkedin.com/in/antonioknx/detail/contact-info/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/GMAIL_icon-icons.com_65540.png" width="50%" height="50%"></p></a></li>
+          </ul>
+        </div>
+       </div>
+        </div>
+
+        <div class="box">
+          <div class="imgBox">
+            <img src="../Resilia-Flix/img/avatard.jpg">
+          </div>
+        <div class="conteudo">
+          <div>
+            <h2>Daniel - RJ</h2>
+            <ul>
+              <li><a href="https://github.com/danielvdg"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/GITHUB_icon-icons.com_65553.png" width="50%" height="50%"></p></a></li>
+              <li><a href="https://www.linkedin.com/in/daniel-alves-37497a1a2/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/LINKEDIN_icon-icons.com_65538.png" width="50%" height="50%"></p></a></li>
+              <li><a href="https://www.linkedin.com/in/daniel-alves-37497a1a2/detail/contact-info/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/whatsapp_icon-icons.com_65542.png" width="50%" height="50%"></p></a></li>
+              <li><a href="https://www.linkedin.com/in/daniel-alves-37497a1a2/detail/contact-info/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/GMAIL_icon-icons.com_65540.png" width="50%" height="50%"></p></a></li>
+             </ul>
+          </div>
+        </div>
+         </div>
+
+         <div class="box">
+          <div class="imgBox">
+            <img src="../Resilia-Flix/img/avatark.jpg">
+          </div>
+        <div class="conteudo">
+          <div>
+            <h2>Kellen - SC</h2>
+            <ul>
+              <li><a href="https://github.com/kellenThaisaLima"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/GITHUB_icon-icons.com_65553.png" width="50%" height="50%"></p></a></li>
+              <li><a href="https://www.linkedin.com/in/kellenthaisadelima/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/LINKEDIN_icon-icons.com_65538.png" width="50%" height="50%"></p></a></li>
+              <li><a href="https://www.linkedin.com/in/kellenthaisadelima/detail/contact-info/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/whatsapp_icon-icons.com_65542.png" width="50%" height="50%"></p></a></li>
+              <li><a href="https://www.linkedin.com/in/kellenthaisadelima/detail/contact-info/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/GMAIL_icon-icons.com_65540.png" width="50%" height="50%"></p></a></li>
+             </ul>
+          </div>
+        </div>
+         </div>
+
+         <div class="box">
+          <div class="imgBox">
+            <img src="../Resilia-Flix/img/avatarn.jpg">
+          </div>
+        <div class="conteudo">
+          <div>
+            <h2>Nathalia - RJ</h2>
+            <ul>
+              <li><a href="https://github.com/NathaliaRezendet"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/GITHUB_icon-icons.com_65553.png" width="50%" height="50%"></p></a></li>
+              <li><a href="https://www.linkedin.com/in/nathalia-rezende-876aa6162/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/LINKEDIN_icon-icons.com_65538.png" width="50%" height="50%"></p></a></li>
+              <li><a href="https://www.linkedin.com/in/nathalia-rezende-876aa6162/detail/contact-info/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/whatsapp_icon-icons.com_65542.png" width="50%" height="50%"></p></a></li>
+              <li><a href="https://www.linkedin.com/in/nathalia-rezende-876aa6162/detail/contact-info/"><p><img src="https://cdn.icon-icons.com/icons2/792/PNG/128/GMAIL_icon-icons.com_65540.png" width="50%" height="50%"></p></a></li>
+             </ul>
+          </div>
+        </div>
+         </div>
+         <button id="voltarHome" class="mx-auto my-3">Voltar</button> 
+     </div>
+     
+    </section>
 
   <footer class="footer">
     <section class="faq deslogado">
@@ -372,13 +499,11 @@
       </dl>
     </section>
 
-    <form class="form-cta deslogado">
-      <input type="text" placeholder="Email" />
-      <button>Vamos lá</button>
-    </form>
+    
+      <button type="button" class="faleconosco deslogado">Fale Conosco</button>
+    
     <p>Copyright © 2021 Resiliaflix Brasil. Todos os direitos reservados.</p>
   </footer>
-
 
   <div class="modal fade" tabindex="-1" id="filmeInfos">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
@@ -455,6 +580,8 @@
     </div>
   </div>
 
+  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
     crossorigin="anonymous"> </script>
@@ -499,16 +626,17 @@
                     <div id='loaderLogin' class="spinner-border text-warning" role="status">
                       <span class="sr-only">Loading...</span>
                       </div>
-                    <button id="logar">Sign in</button>
+                    <button id="logar">Logar</button>
+                    
+                    <span class="badge rounded-pill bg-danger">VERIFIQUE SEUS DADOS</span>
                   </div>
+                  
                   <div class="suporte">
                     <div class="lembreDeMim">
                       <span><input type="checkbox"></span>
                       <span>Lembre-se de mim</span>
                     </div>
-                    <div class="ajuda">
-                      Precisa de ajuda?
-                    </div>
+                    <span><a id="esqueciAsenha" href="#">Esqueceu sua senha?</a></span>
                   </div>
                   <div class="loginFooter">
                     <div class="loginFace">
@@ -516,7 +644,7 @@
                       <span><a href="#">Entre com o facebook</a></span>
                     </div>
                     <div class="signUp">
-                      <p>Novo no Resiliaflix? <a href="#">Cadastre-se.</a></p>
+                      <p>Novo no Resiliaflix? <a href="#" id="Cadastrese">Cadastre-se.</a></p>
                     </div>
                     <div class="termos">
                       <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.<a
