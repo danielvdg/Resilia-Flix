@@ -36,7 +36,7 @@
 
 .inputCadastro{
 
-    margin: 10px 0px;
+    margin: 10px 100px 30px;
     border-radius: 3px;    
     display: flex;
     height: 50px;   
@@ -102,6 +102,10 @@ label{
     text-align: center;
 }
 
+h2.cadastroSec {
+    font-size: 40px;
+}
+
 .casdastrorealizado{
     display: none;
 }
@@ -116,14 +120,20 @@ label{
 }
 
 #voltarHome{
-    margin: 0 auto;
+    margin: 0 90%;
     width: 10%;
-    background-color: #f4d11e ;
+    background-color: #2c2c2c ;
     height: 50px;       
-    color: #2c2c2c;
+    color: white ;
     font-weight: bold;
-    border: 1px solid #2c2c2c;
     border-radius: 4px;
+}
+
+#voltarHome:hover {
+
+    background-color: #f4d11e ;
+    color: #2c2c2c;
+    transition: 0.5s;
 }
 
 .recSenha{
@@ -176,6 +186,59 @@ label{
     .recSenha{
         margin-top: 100px;
     
+    }
+
+
+  }
+
+   /*------INPUTS---------*/
+  
+   input#nome, input#rua, input#complemento {
+
+    width: 50%;
+    height: 40px;
+  }
+
+  input#email {
+
+    width: 30%;
+    height: 40px;
+  }
+
+  input#senha, input#confirmacaoSenha {
+
+    margin-bottom: 0;
+  }
+
+  input#senha, input#confirmacaoSenha,
+  input#bairro, input#cidade
+  {
+
+    width: 25%;
+    height: 40px;
+  }
+
+  input#numero, input#uf {
+    width: 100px;
+    height: 40px;
+  }
+  input#rg, input#data, input#cep {
+
+    width: 25%;
+    height: 40px;
+
+  }
+
+  @media (max-width: 600px){
+
+    
+  
+    legend {
+
+        
+        display: flex;
+        font-size: 10px;       
+        white-space: nowrap;
     }
 
 
