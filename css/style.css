@@ -8,6 +8,7 @@
     
     color: white;
     padding-right: 0px;
+    font-family: 'Bebas Neue', cursive;
   }
   
   img {
@@ -432,7 +433,8 @@
   div img {
 
     border-radius: 4px;
-    
+
+        
   }
 
   .imgCresce div img{
@@ -449,6 +451,7 @@
   #Antonio {    
     width: 20%;
     height: 20%;    
+
     display: inline-block;
     cursor: pointer;
 
