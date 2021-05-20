@@ -58,6 +58,7 @@
 }
 
 .txtInput{
+  display: flex;
     width: 100%;
     
 }  
