@@ -282,22 +282,6 @@ btnCadastrar.addEventListener("click",function(e){
     const deuCerto = validacao.every((verdadeiro)=>verdadeiro)
 
     console.log(deuCerto)
-
-    
     
 });
 console.log(btnCadastrar.value)
-
-// validaNome(nome)
-// validaEmail(email)
-// validaSenha(senha)
-// validaConfirmacao(senha, confirmacaoSenha)
-// validaRg(rg)
-// validaData(data)
-// validaCep(cep)
-// validaRua(rua)
-// validaNumero(numero)
-// validaComplemento(complemento)
-// validaBairro(bairro)
-// validaCidade(cidade)
-// validaUf(uf)

@@ -1,9 +1,9 @@
-mensagemSucesso = document.querySelector("#mensagem-sucesso")
-emailEnviado = document.querySelector("#email-enviado")
-btnEnviar = document.querySelector("#btnEnviar")
-email = document.querySelector("#email")
-caixaMensagem = document.querySelector(".mensagem-conteiner-invisivel")
-emailInvalido = document.querySelector("#erro-email-invisivel")
+let mensagemSucesso = document.querySelector("#mensagem-sucesso")
+let emailEnviado = document.querySelector("#email-enviado")
+let btnEnviar = document.querySelector("#btnEnviar")
+let email = document.querySelector("#email")
+let caixaMensagem = document.querySelector(".mensagem-conteiner-invisivel")
+let emailInvalido = document.querySelector("#erro-email-invisivel")
 
 
 
