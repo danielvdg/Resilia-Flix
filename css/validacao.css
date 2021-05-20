@@ -36,7 +36,7 @@
 
 .inputCadastro{
 
-    margin: 10px 0px;
+    margin: 10px 100px 30px;
     border-radius: 3px;    
     display: flex;
     height: 50px;   
@@ -100,6 +100,10 @@ label{
     color: #f4d11e ;
     font-family: 'Bebas Neue', cursive;
     text-align: center;
+}
+
+h2.cadastroSec {
+    font-size: 40px;
 }
 
 .casdastrorealizado{
@@ -182,6 +186,59 @@ label{
     .recSenha{
         margin-top: 100px;
     
+    }
+
+
+  }
+
+   /*------INPUTS---------*/
+  
+   input#nome, input#rua, input#complemento {
+
+    width: 50%;
+    height: 40px;
+  }
+
+  input#email {
+
+    width: 30%;
+    height: 40px;
+  }
+
+  input#senha, input#confirmacaoSenha {
+
+    margin-bottom: 0;
+  }
+
+  input#senha, input#confirmacaoSenha,
+  input#bairro, input#cidade
+  {
+
+    width: 25%;
+    height: 40px;
+  }
+
+  input#numero, input#uf {
+    width: 100px;
+    height: 40px;
+  }
+  input#rg, input#data, input#cep {
+
+    width: 25%;
+    height: 40px;
+
+  }
+
+  @media (max-width: 600px){
+
+    
+  
+    legend {
+
+        
+        display: flex;
+        font-size: 10px;       
+        white-space: nowrap;
     }
 
 
