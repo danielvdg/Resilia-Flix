@@ -18,7 +18,6 @@ let erros = document.querySelectorAll(".mensagens-erros")
 let verificar = document.querySelectorAll(".verificar")
 
 
-
 function validaNome (nome){
     
    let nomeCompleto = nome.value.split(" ")
@@ -281,10 +280,30 @@ btnCadastrar.addEventListener("click",function(e){
 
     const deuCerto = validacao.every((verdadeiro)=>verdadeiro)
 
+    if(deuCerto){
 
-      if(deuCerto){
-        _email = 'CAMPO DE MAIL'
-        _pass = 'CAMPO DE SENHA'
+        let _email = $('#email').val()
+        let _pass = $('#senha').val()
+
+        localStorage.setItem('email', _email)
+        localStorage.setItem('senha', _pass)
+
+        setTimeout(function(){
+
+            $('.cadastroTransp').hide()
+            $('.deslogado').fadeIn()
+            $('.casdastrorealizado').fadeIn()
+
+            $('html, body').animate({scrollTop:0}, 'slow');
+
+            setTimeout(function(){
+
+           
+                $('.casdastrorealizado').fadeOut()
+                
+            }, 3500)
+            
+        }, 600)      
 
     }
 
