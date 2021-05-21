@@ -78,7 +78,7 @@ nomeBusca.on('keyup', function () {
 
         $.ajax({
 
-            url: `http://www.omdbapi.com/?s=${nomeFilme}&type=movie&apikey=fbde633c`,
+            url: `https://www.omdbapi.com/?s=${nomeFilme}&type=movie&apikey=fbde633c`,
             success: filme => {
 
                 filmes = filme.Search
@@ -149,7 +149,7 @@ retornaPaginaFilme.on('click', function () {
 
         $.ajax({
 
-            url: `http://www.omdbapi.com/?s=${nomeFilme}&type=movie&page=${--paginaAtual}&apikey=fbde633c`,
+            url: `https://www.omdbapi.com/?s=${nomeFilme}&type=movie&page=${--paginaAtual}&apikey=fbde633c`,
             success: filme => {
                 filmes = filme.Search
 
@@ -170,7 +170,7 @@ retornaPaginaFilme.on('click', function () {
 
         $.ajax({
 
-            url: `http://www.omdbapi.com/?s=${nomeFilme}&type=movie&page=${--paginaAtual}&apikey=fbde633c`,
+            url: `https://www.omdbapi.com/?s=${nomeFilme}&type=movie&page=${--paginaAtual}&apikey=fbde633c`,
             success: filme => {
                 filmes = filme.Search
 
@@ -200,7 +200,7 @@ avancaPaginaFilme.on('click', function () {
 
         $.ajax({
 
-            url: `http://www.omdbapi.com/?s=${nomeFilme}&type=movie&page=${++paginaAtual}&apikey=fbde633c`,
+            url: `https://www.omdbapi.com/?s=${nomeFilme}&type=movie&page=${++paginaAtual}&apikey=fbde633c`,
             success: filme => {
                 filmes = filme.Search
 
@@ -222,7 +222,7 @@ avancaPaginaFilme.on('click', function () {
 
         $.ajax({
 
-            url: `http://www.omdbapi.com/?s=${nomeFilme}&type=movie&page=${--paginaAtual}&apikey=fbde633c`,
+            url: `https://www.omdbapi.com/?s=${nomeFilme}&type=movie&page=${--paginaAtual}&apikey=fbde633c`,
             success: filme => {
                 filmes = filme.Search
 
@@ -253,7 +253,7 @@ numPagina.on('blur', function () {
 
     $.ajax({
 
-        url: `http://www.omdbapi.com/?s=${nomeFilme}&type=movie&page=${paginaAtual}&apikey=fbde633c`,
+        url: `https://www.omdbapi.com/?s=${nomeFilme}&type=movie&page=${paginaAtual}&apikey=fbde633c`,
         success: filme => {
             filmes = filme.Search
 
@@ -295,7 +295,7 @@ linkFilme.on('click', function () {
 
             $.ajax({
 
-                url: `http://www.omdbapi.com/?i=${filmesPrincipais[i]}&apikey=fbde633c`,
+                url: `https://www.omdbapi.com/?i=${filmesPrincipais[i]}&apikey=fbde633c`,
                 success: filme => {
 
                     let arrFilmes = []
@@ -319,7 +319,7 @@ $(document).delegate('.infoBotao', 'click', function () {
 
     $.ajax({
 
-        url: `http://www.omdbapi.com/?i=${this.id}&apikey=fbde633c`,
+        url: `https://www.omdbapi.com/?i=${this.id}&apikey=fbde633c`,
         success: filme => {
 
             const filmeModel = new FilmeModel(filme.Title, filme.Actors, filme.Director, filme.Year, filme.imdbRating, filme.Runtime, filme.Released, filme.Plot, filme.Poster)
@@ -360,7 +360,7 @@ function logar() {
 
             $.ajax({
 
-                url: `http://www.omdbapi.com/?i=${filmesPrincipais[i]}&apikey=fbde633c`,
+                url: `https://www.omdbapi.com/?i=${filmesPrincipais[i]}&apikey=fbde633c`,
                 success: filme => {
 
                     arrFilmes.push(filme)
